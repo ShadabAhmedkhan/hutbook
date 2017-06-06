@@ -64,14 +64,14 @@ uploadImage(image){
 
 
   // let images: Array<any> = imagesArray();
-  formData.append('uploads', image[0]);
+  formData.append('images', image[0]);
   // formData.append('uploads', image[0]);
   console.log('dataaa',  formData);
-console.log('dataaq',formData.get('uploads'))
+console.log('dataaq',formData.get('images'))
   
   let headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/hut/', formData,{headers:headers})
+    // headers.append('Content-Type', 'application/json');
+    return this.http.post('http://localhost:3000/hut/', formData.get('images'),{headers:headers})
     .map(res => res.json()).subscribe(imgData =>{
       this.imgPaths.push(imgData.path)
     });
@@ -114,7 +114,7 @@ getUserHuts(){
   deleteHut(hutInfo){
   let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.delete('http://localhost:3000/delete/'+hutInfo._id , {headers: headers})
+    return this.http.delete('http://localhost:3000/delete/'+hutInfo.id , {headers: headers})
 
 }
 

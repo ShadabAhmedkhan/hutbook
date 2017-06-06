@@ -1,3 +1,79 @@
-<p>
-  myhuts works!
-</p>
+
+
+
+    
+
+
+ <div class="container col-md-4 col-sm-6" *ngFor="let Huts of Huts; let i=index">
+<div class="card hovercard">
+   <img src="http://placehold.it/300x200/000000/&text=Header" alt=""/>
+   <div class="avatar">
+      <img src="http://placehold.it/80X80/333333/&text=Head" alt="" />
+   </div>
+   <div class="info" >
+      <div class="title">
+         The Title
+      </div>
+       <!--<img src="data:image/jpeg;base64,{{Huts.base64Img[0]}}" class="img-responsive" alt="aaaaaaaaaaaaaa" />-->
+       <div class="desc"><p>name:{{Huts.name}}</p></div>
+      <div class="desc">address:{{Huts.address}}</div>
+      <div class="desc">unit:{{Huts.unit}}</div>
+       <div class="desc"><p>rent:{{Huts.rent}}</p></div>
+      <div class="desc"><p>rooms:{{Huts.rooms}}</p></div> 
+        <!--<div class="thumbnail">
+                     <img [src]="'data:image/jpeg;base64,'+Huts.base64Img[0]" height="800" width="500"> 
+       </div>-->
+       <div class="desc"><p>description:{{Huts.description}}</p>
+</div>
+      <div class="desc"><p>location:{{Huts.location}}</p>
+</div>
+      <div class="desc"><p>maxPersonAllowed:{{Huts.maxPersonAllowed}}</p></div>
+   </div>
+   <div class="bottom">
+      <a class="btn btn-danger" (click)="delete(Huts, i)">Delete</a>
+                            <a class="btn btn-default"(click)="update(Huts, i)">Edit</a>
+  </div>
+</div>
+ 
+ </div>
+
+
+<!--map-->
+ <div class="container col-sm-12">
+		<sebm-google-map 
+[latitude]="lat" 
+[longitude]="lng"
+[zoom]="zoom"
+[disableDefaultUI]="false"
+[zoomControl]="true"
+>
+
+  <sebm-google-map-marker 
+  *ngFor="let Huts of Huts; let i=index"
+  (markerClick)="clickedMarker(mapMarker)" 
+  [latitude]="Huts.latitude" 
+  [longitude]="Huts.longitude"
+  [markerDraggable]="false">
+
+  <sebm-google-map-info-window>
+    <h1>Beach huts</h1>
+    <label>Name:</label>  {{Huts.name}} <br>
+    <label>Unit:</label>  {{Huts.unit}} <br>
+    <label>Rooms:</label>  {{Huts.rooms}} <br>
+    <label>Desciption:</label>  {{Huts.description}} <br>
+    <label>Rent:</label>  {{Huts.rent}} <br>
+
+    <form>
+    <button class="btn btn-primary btn-sm" (click)="flag = true">Write a review</button> <br><br>
+      <div *ngIf="flag === true" class="col-lg-10 form-group">
+        <textarea class="form-control" rows="3" id="textArea"></textarea>
+      </div>
+
+    </form>
+  </sebm-google-map-info-window>
+  
+  </sebm-google-map-marker>
+</sebm-google-map>
+	</div>
+          
+

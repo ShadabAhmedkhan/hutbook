@@ -1,3 +1,69 @@
-<p>
-  hut-update works!
-</p>
+
+
+<hr><hr>
+<li>  {{hut.name}}
+
+</li>
+        <h2 class="page-header">Register</h2>
+<form (submit)="updhut()"
+>
+          <!--<div id="div_id_email" class="form-group required">
+                            <label  class="control-label col-md-4  requiredField">Name: <span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 ">
+                                <input
+                                 class="input-md emailinput form-control" 
+                                [value]="hut.name" 
+                                name="name"
+                                 placeholder="Your hut name"
+                                  style="margin-bottom: 10px"
+                                   type="text"
+                                     />
+                            </div>     
+                        </div>-->
+              
+  <div class="form-group" >
+    <label>Name</label>
+    <input type="text"
+    name="name" 
+    [value]="hut.name" 
+    />
+  </div>
+
+
+    <div class="form-group">
+    <label>rooms</label>
+    <input type="text" 
+    [value]="hut.rooms" 
+    name="rooms" 
+    class="form-control">
+  </div>
+    <div class="form-group">
+    <label>maxPersonAllowed</label>
+    <input type="text"
+      [value]="hut.maxPersonAllowed" 
+       name="maxPersonAllowed" 
+       class="form-control">
+  </div>
+  
+   
+    <div class="form-group">
+    <label>rent</label>
+    <input type="text"
+    name="rent"
+    [value]="hut.rent"
+     class="form-control">
+  </div>
+    <div class="form-group">
+    <label>description</label>
+    <input type="text" 
+    [(ngModel)]="description" 
+    [value]="hut.description"
+     name="description" 
+      class="form-control">
+  </div>
+   <!--<div class="form-group">
+			<label><span>Choose Image</span><input type="file" id="myFile" (change)="onChange($event)"></label>
+		</div>-->
+  
+  <input type="submit" value="submit" class="btn btn-primary">
+</form>

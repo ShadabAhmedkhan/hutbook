@@ -39,26 +39,17 @@ Huts.addHut(newhut, (err,hut)=>{
 
  // GET ALL HUTS
 
-router.get('/huts', (req , res, next)=>{
+  router.get('/huts', (req , res, next)=>{
 
-// router.get('/huts/:email',(req, res, next)=>{
-    // console.log('get', req.body);
-    let email = req.params.email
-    // console.log(user.email);
-    // Huts.getHutsByEmail(email, (err, hut)=>{
 Huts.getHutBylocation((err,hut)=>{
-
-         if(err){
-            res.json({
-                success: false,
-                msg: 'Error'
-            })
-        }
+ if(err){
+     throw err;
+ }
 
         else{
 
 
-            let hutData = []
+            let hutData  = [];
             for(var i=0 ; i < hut.length ; i++){
 
                 let base64imgArray = [];
@@ -87,16 +78,11 @@ Huts.getHutBylocation((err,hut)=>{
                 })
 
    }
-                             res.json({
-                success: true,
-                hut: hutData,
-                msg: 'Success'
-            })
-            
-            // console.log(hutData.imgPath)
+              res.json(hutData);
         }
-    })
-})
+});
+});
+
 
 
 //hut by user
@@ -146,11 +132,7 @@ router.get('/huts/:email',(req, res, next)=>{
                 })
 
    }
-                             res.json({
-                success: true,
-                hut: hutData,
-                msg: 'Success'
-            })
+                      res.json(hutData);
             
             // console.log(hutData.length)
         }
@@ -240,7 +222,7 @@ var storage = multer.diskStorage({
     }
 });
 
-var uploada = multer({ storage: storage }).single('imgPath');
+var uploada = multer({ storage: storage }).single('myfile');
 
 router.post('/', function (req, res) {
         // console.log('image upload',uploada);
@@ -255,7 +237,7 @@ router.post('/', function (req, res) {
             })    
     }
  else{
-     var raw = new Buffer(fs.readFileSync(req.file.path)).toString('base64');
+    //  var raw = new Buffer(fs.readFileSync(req.file.path)).toString('base64');
 
         res.json({
             success: true,
