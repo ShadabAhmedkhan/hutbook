@@ -40,7 +40,7 @@ app.use('/users', users);
 
 app.use('/hut', huts);
 app.use('/delete', huts);
-// app.use('/put', huts);
+// app.use('/upload', huts);
 app.get('/', (req,res) => {
     res.send('invalid');
 });

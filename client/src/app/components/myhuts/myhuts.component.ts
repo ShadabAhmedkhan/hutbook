@@ -44,7 +44,7 @@ export class MyhutsComponent implements OnInit {
     // let dates = hut.bookedDates.toString();
     let navigationExtras: NavigationExtras = {                            // passing this object in query params
       queryParams:{
-        id: hut._id,
+        id: hut.id,
         name: hut.name,
        
         rooms: hut.rooms,

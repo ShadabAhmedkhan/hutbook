@@ -23,7 +23,7 @@ let newhut = new Huts({
          longitude: req.body.longitude,
          rent: req.body.rent,
          description: req.body.description,
-         imgPath: req.body.imgPath,
+         imgPath: req.body.imgPaths,
          bookedDates: req.body.bookedDate,
                   bookedTime: req.body.bookedTime
 
@@ -222,7 +222,7 @@ var storage = multer.diskStorage({
     }
 });
 
-var uploada = multer({ storage: storage }).single('myfile');
+var uploada = multer({ storage: storage }).single('imgPath');
 
 router.post('/', function (req, res) {
         // console.log('image upload',uploada);
@@ -236,8 +236,8 @@ router.post('/', function (req, res) {
                 msg: 'Error'
             })    
     }
- else{
-    //  var raw = new Buffer(fs.readFileSync(req.file.path)).toString('base64');
+
+     var raw = new Buffer(fs.readFileSync(req.file.path)).toString('base64');
 
         res.json({
             success: true,
@@ -245,7 +245,7 @@ router.post('/', function (req, res) {
                     raw: req.file.path
 
         });
- }
+ 
         // Everything went fine
     })
 });
@@ -277,5 +277,30 @@ router.post('/photos', function (req, res) {
         // Everything went fine
     })
 });
+router.get('/images/:id',(req, res)=>{
+    // console.log('request', req.params.id);
+    var id = req.params.id
+    hut.getHutsById(id, (err, hut)=>{
+        if(err){
+            res.json({
+                success: false,
+                msg: 'Error'
+            })
+        }
+        else{
+            console.log(hut)
+            let base64imgArray = []
+            for(var i=0 ; i< hut.imgPath.length ; i++){
+                    let base64 = new Buffer(fs.readFileSync(hut.imgPath[i])).toString('base64')
+                    base64imgArray.push(base64);
+                }
+            
+            res.json({
+                success: true,
+                base64: base64imgArray 
+            })
+        }
+    })
 
+});
 module.exports = router;

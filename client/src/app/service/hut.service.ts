@@ -4,7 +4,7 @@ import 'rxjs/add/operator/map';
 import {HutModel} from '../modals/hutModel';
 @Injectable()
 export class HutService {
-  imgPaths:  Array<any[]>=[]
+  imgPaths:  Array<String>=[]
   hash: Array<any[]>
   data;
   newHut:any={
@@ -19,7 +19,7 @@ export class HutService {
       longitude: Number,
       rent: Number,
       description: String,
-      imgPaths:Array,
+      imgPath:Array,
       bookedDates: Array
   }
   constructor(private http:Http) { 
@@ -41,7 +41,7 @@ export class HutService {
       longitude: locObj.lng,
       rent: hutDetails.rent,
       description: hutDetails.description,
-imgPaths:this.imgPaths,
+imgPath :this.imgPaths,
       bookedDates: []
       
     }
@@ -71,7 +71,7 @@ console.log('dataaq',formData.get('images'))
   
   let headers = new Headers();
     // headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/hut/', formData.get('images'),{headers:headers})
+    return this.http.post('http://localhost:3000/hut', formData, {headers: headers})
     .map(res => res.json()).subscribe(imgData =>{
       this.imgPaths.push(imgData.path)
     });

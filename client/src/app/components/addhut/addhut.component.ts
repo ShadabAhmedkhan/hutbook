@@ -30,7 +30,7 @@ export class AddhutComponent implements OnInit {
          longitude: number;
          rent:number;
          description: String;
-        imgPath:String;
+        imgPaths:String;
       //  images: Array<any> = [];
   constructor(  private _flashMessagesService: FlashMessagesService,
   private hutService:HutService,
@@ -105,13 +105,13 @@ addHut(){
           latitude:this.latitude,
          longitude: this.longitude,
          rent:this.rent,
-         description: this.description,
-      imgPath:this.imgPath
+         description: this.description
+      // imgPath:this.imgPaths
 
       
 
   }
-              console.log("sspp",this.imgPath);
+              console.log("sspp",this.imgPaths);
 
     this.hutService.addhut(hut,   this.mapMarker).subscribe(data => {//
       if(data.success){
