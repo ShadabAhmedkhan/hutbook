@@ -5,7 +5,7 @@ module.exports = {
    
    
    
-  //  database: 'mongodb://shadab101:pakistan5@ds133261.mlab.com:33261/hutbooking',   //prod
+    database: 'mongodb://shadab101:pakistan5@ds133261.mlab.com:33261/hutbooking',   //prod
 // mongodb://<dbuser>:<dbpassword>@ds133261.mlab.com:33261/hutbooking
   secret: 'yoursecret'
 
