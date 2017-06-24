@@ -1006,7 +1006,7 @@ var AuthService = (function () {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         // let ep = this.prepEndpoint('users/register');
-        return this.http.post('http://localhost:3000/users/register', user, { headers: headers })
+        return this.http.post('https://meanapp-hutbooking.herokuapp.com/users/register', user, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.authenticateUser = function (user) {
@@ -1014,7 +1014,7 @@ var AuthService = (function () {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         // let ep = this.prepEndpoint();
-        return this.http.post('http://localhost:3000/users/authenticate', user, { headers: headers })
+        return this.http.post('https://meanapp-hutbooking.herokuapp.com/users/authenticate', user, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.getProfile = function () {
@@ -1023,7 +1023,7 @@ var AuthService = (function () {
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
         // // let ep = this.prepEndpoint(');
-        return this.http.get('http://localhost:3000/users/profile', { headers: headers })
+        return this.http.get('https://meanapp-hutbooking.herokuapp.com/users/profile', { headers: headers })
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.storeUserData = function (token, user) {
@@ -1049,7 +1049,7 @@ var AuthService = (function () {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         // localhost:3000/users/alluser
-        return this.http.get('http://localhost:3000/users/alluser', { headers: headers })
+        return this.http.get('https://meanapp-hutbooking.herokuapp.com/users/alluser', { headers: headers })
             .map(function (res) { return res.json(); });
     };
     return AuthService;
@@ -1254,7 +1254,7 @@ var HutService = (function () {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         // let ep = this.prepEndpoint('users/register');
-        return this.http.post('http://localhost:3000/hut/addhut', this.newHut, { headers: headers })
+        return this.http.post('https://meanapp-hutbooking.herokuapp.com/hut/addhut', this.newHut, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     HutService.prototype.uploadImage = function (image) {
@@ -1269,7 +1269,7 @@ var HutService = (function () {
         console.log('dataaq', formData.get('images'));
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         // headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/hut', formData, { headers: headers })
+        return this.http.post('https://meanapp-hutbooking.herokuapp.com/hut', formData, { headers: headers })
             .map(function (res) { return res.json(); }).subscribe(function (imgData) {
             _this.imgPaths.push(imgData.path);
         });
@@ -1291,7 +1291,7 @@ var HutService = (function () {
     HutService.prototype.fetchHuts = function () {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.get('http://localhost:3000/hut/huts', { headers: headers })
+        return this.http.get('https://meanapp-hutbooking.herokuapp.com/hut/huts', { headers: headers })
             .map(function (res) { return res.json(); });
     };
     HutService.prototype.getUserHuts = function () {
@@ -1302,26 +1302,26 @@ var HutService = (function () {
         console.log(userinfo.email);
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.get('http://localhost:3000/hut/huts/' + userinfo.email, { headers: headers })
+        return this.http.get('https://meanapp-hutbooking.herokuapp.com/hut/huts/' + userinfo.email, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     HutService.prototype.deleteHut = function (hutInfo) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.delete('http://localhost:3000/delete/' + hutInfo.id, { headers: headers });
+        return this.http.delete('https://meanapp-hutbooking.herokuapp.com/delete/' + hutInfo.id, { headers: headers });
     };
     HutService.prototype.booking = function (hutInfo) {
         // console.log('aaa',hutInfo)
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/hut/book', hutInfo, { headers: headers })
+        return this.http.post('https://meanapp-hutbooking.herokuapp.com/hut/book', hutInfo, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     HutService.prototype.updateHut = function (hutInfo, id) {
         console.log('id', id);
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.put('http://localhost:3000/hut/update/' + id, hutInfo, { headers: headers })
+        return this.http.put('/hut/update/' + id, hutInfo, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     return HutService;

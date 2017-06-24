@@ -21,7 +21,7 @@ isDev:boolean;
     headers.append('Content-Type','application/json');
         // let ep = this.prepEndpoint('users/register');
 
-    return this.http.post('http://localhost:3000/users/register',user,{headers:headers})
+    return this.http.post('https://meanapp-hutbooking.herokuapp.com/users/register',user,{headers:headers})
     .map(res => res.json());
   }
   authenticateUser(user){
@@ -30,7 +30,7 @@ isDev:boolean;
         let headers = new Headers();
     headers.append('Content-Type','application/json');
     // let ep = this.prepEndpoint();
-    return this.http.post('http://localhost:3000/users/authenticate',user,{headers:headers})
+    return this.http.post('https://meanapp-hutbooking.herokuapp.com/users/authenticate',user,{headers:headers})
     .map(res => res.json());
   }
   getProfile(){
@@ -39,7 +39,7 @@ isDev:boolean;
      headers.append('Authorization',this.authToken);
     headers.append('Content-Type','application/json');
     // // let ep = this.prepEndpoint(');
-    return this.http.get('http://localhost:3000/users/profile',{headers:headers})
+    return this.http.get('https://meanapp-hutbooking.herokuapp.com/users/profile',{headers:headers})
     .map(res => res.json());
   }
   storeUserData(token, user){
@@ -66,7 +66,7 @@ isDev:boolean;
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     // localhost:3000/users/alluser
-    return this.http.get('http://localhost:3000/users/alluser', {headers: headers})
+    return this.http.get('https://meanapp-hutbooking.herokuapp.com/users/alluser', {headers: headers})
     .map(res => res.json())
   }
 }

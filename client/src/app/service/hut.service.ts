@@ -51,7 +51,7 @@ imgPath :this.imgPaths,
     headers.append('Content-Type','application/json');
         // let ep = this.prepEndpoint('users/register');
 
-    return this.http.post('http://localhost:3000/hut/addhut',this.newHut,{headers:headers})
+    return this.http.post('https://meanapp-hutbooking.herokuapp.com/hut/addhut',this.newHut,{headers:headers})
     .map(res => res.json());
 
 
@@ -71,7 +71,7 @@ console.log('dataaq',formData.get('images'))
   
   let headers = new Headers();
     // headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/hut', formData, {headers: headers})
+    return this.http.post('https://meanapp-hutbooking.herokuapp.com/hut', formData, {headers: headers})
     .map(res => res.json()).subscribe(imgData =>{
       this.imgPaths.push(imgData.path)
     });
@@ -96,7 +96,7 @@ console.log('dataaq',formData.get('images'))
    fetchHuts(){
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.get('http://localhost:3000/hut/huts', {headers: headers})
+    return this.http.get('https://meanapp-hutbooking.herokuapp.com/hut/huts', {headers: headers})
     .map(res => res.json())
   }
 getUserHuts(){
@@ -107,14 +107,14 @@ getUserHuts(){
     console.log(userinfo.email)
    let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.get('http://localhost:3000/hut/huts/'+userinfo.email, {headers: headers})
+    return this.http.get('https://meanapp-hutbooking.herokuapp.com/hut/huts/'+userinfo.email, {headers: headers})
     .map(res => res.json());
 }
 
   deleteHut(hutInfo){
   let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.delete('http://localhost:3000/delete/'+hutInfo.id , {headers: headers})
+    return this.http.delete('https://meanapp-hutbooking.herokuapp.com/delete/'+hutInfo.id , {headers: headers})
 
 }
 
@@ -122,7 +122,7 @@ booking(hutInfo){
   // console.log('aaa',hutInfo)
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/hut/book', hutInfo, {headers: headers})
+    return this.http.post('https://meanapp-hutbooking.herokuapp.com/hut/book', hutInfo, {headers: headers})
     .map(res => res.json());
   }
 
@@ -140,7 +140,7 @@ updateHut(hutInfo,id){
   console.log('id', id )
   let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.put('http://localhost:3000/hut/update/'+id,hutInfo , {headers: headers})
+    return this.http.put('/hut/update/'+id,hutInfo , {headers: headers})
     .map(res => res.json());
 }
 }
