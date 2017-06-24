@@ -27,7 +27,7 @@ const port = process.env.PORT || 3000;
 
 app.use(cors());
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'dist')));
 
 app.use(bodyParser.json());
 
@@ -47,7 +47,7 @@ app.get('/', (req,res) => {
 
 app.get('*', (req,res)=>{
 // res.sendFile(__dirname, path.join('public/index.html'));
-res.sendFile(path.join(__dirname,'public/index.html'));
+res.sendFile(path.join(__dirname,'dist/index.html'));
 });
 
 app.listen(port, ()=>{
