@@ -10,7 +10,104 @@
   <!-- Cascade Style Sheets -->
     <!--<link rel="stylesheet" type="text/css" href="bootstrap.css">-->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+    <script>
+        var status = 0;
+        function show(sidebar) {
+            if (status == 0) {
+                sidebar.style.left = "0px";
+                sidebar.style.transition = "left 0.6s linear";
+                status = 1;
 
+            }
+            else
+            {
+                sidebar.style.left = "-200px";
+                sidebar.style.transition = "left 0.6s linear";
+                status = 0;
+             show().style.right="200px hide";
+            }
+
+
+        }
+ </script>
+ <style>
+        body{
+            padding: 0px;
+            margin: 0px;
+            font-family: "Helvetica";
+        }
+        #sidebar{
+            width: 200px;
+        height: 100%;
+            position: absolute;
+            background:#93c54b;
+            top: 63px;
+            left: -200px;
+        }
+        #sidebar ul{
+            margin: 0px;
+            padding: 0px;
+        }
+        #sidebar ul li{
+            color: #6d9731;
+            padding: 10px;
+            width: 180px;
+            border-bottom: 2px solid #93c54b;
+            /*boder-bottom:2px solid black;*/
+            display: block;
+        }
+ 
+ #btn{
+            padding: 20px;
+            margin: 20px;
+            position: absolute;
+            right: -75px;
+        }
+        #btn span{
+            width: 25px;
+            height: 5px;
+            background-color: #93c54b;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        /*#btn{
+            padding: 20px;
+            margin: 20px;
+            position: absolute;
+            right: -75px;
+        }
+        #btn span{
+            width: 25px;
+            height: 5px;
+            background-color: black;
+            display: block;
+            margin-bottom: 4px;
+        }*/
+       a:link{
+text-decoration:none;
+
+        }
+        p{
+            color: #6d9731;
+        }
+        a{
+           color:  #6e9e3e
+        }
+     /*     #sidebar0{
+            width: 200px;
+        height: 100%;
+            position: absolute;
+            background:#151717;
+            top: 0px;
+            left: 20px;
+        }*/
+        @media (min-width: 768px){
+
+.navbar {
+    border-radius: 0px;
+}}
+    </style>
   <title>Hut reservation system</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">

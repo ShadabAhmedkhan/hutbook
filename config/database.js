@@ -1,6 +1,6 @@
 module.exports = {
   // database: 'mongodb://shadab101:pakistan5@ds137141.mlab.com:37141/huts',   //prod
-  database: 'mongodb://localhost:27017/meanauth',    //dev
+ // database: 'mongodb:////localhost:27017/meanauth',    //dev
 // database: ' mongodb://shadab101:pakistan5@ds137141.mlab.com:37141/huts',
    
    

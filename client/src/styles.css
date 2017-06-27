@@ -31,3 +31,7 @@
     -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
   }
 }
+
+.hut-margi{
+    margin: 43px;
+    margin-left: 73px;}

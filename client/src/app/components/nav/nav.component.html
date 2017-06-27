@@ -41,29 +41,33 @@
             <!--/.nav-collapse -->
         </div>
     </nav>
-     <div id="sidebar-wrapper" *ngIf="authService.loggedIn()">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                        Start Bootstrap
-                    </a>
-                </li>
-              
+<div id="sidebar" >
+    <div id="btn" onclick="show(sidebar)">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+<ul >
+           
+<li><a [routerLink]="['/']">Home</a></li>
 <li *ngIf="authService.loggedIn()"  [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['/profile']">profile</a></li>
+<li  *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}"><a  [routerLink]="['/addhuts']">addhut</a></li>                
+<li *ngIf="authService.loggedIn()"  [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['/myhuts']">myhuts</a></li>
+               
+</ul>
+</div>
+
+    <!-- <div id="sidebar-wrapper" *ngIf="authService.loggedIn()">
+            <ul class="sidebar-nav">
+               
+              
+            <li><a [routerLink]="['/']">Home</a></li>
               
 <li *ngIf="authService.loggedIn()"  [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['/profile']">profile</a></li>
 <li  *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}"><a  [routerLink]="['/addhuts']">addhut</a></li>                
 
               <li *ngIf="authService.loggedIn()"  [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['/myhuts']">myhuts</a></li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
+               
             </ul>
-        </div>
+        </div>-->
         <!-- /#sidebar-wrapper -->
