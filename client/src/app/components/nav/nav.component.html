@@ -41,7 +41,7 @@
             <!--/.nav-collapse -->
         </div>
     </nav>
-<div id="sidebar" >
+<div id="sidebar" *ngIf="authService.loggedIn()" >
     <div id="btn" onclick="show(sidebar)">
         <span></span>
         <span></span>

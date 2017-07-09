@@ -34,10 +34,10 @@ onLoginSubmit(){
       if(data.success){
         this.authService.storeUserData(data.token, data.user);
               this._flashMessagesService.show('you are loggin', { cssClass: 'alert-success' } );
-this.router.navigate(['dashboard']);
+this.router.navigate(['/']);
       }else{
         this._flashMessagesService.show('something went rong', { cssClass: 'alert-danger' } );
-this.router.navigate(['login']);
+this.router.navigate(['SignIn']);
       }
 });
 }
