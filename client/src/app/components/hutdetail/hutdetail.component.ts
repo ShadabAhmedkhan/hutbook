@@ -18,9 +18,9 @@ export class HutdetailComponent implements OnInit {
   constructor(private route: ActivatedRoute, private hutService: HutService) {  
  
  this.route.queryParams.subscribe((params: any) =>{
-      console.log('query params',params);
+      // console.log('query params',params);
       this.hutObj = params;
-      console.log(  'hghg',  this.hutObj.id)
+      // console.log(  'hghg',  this.hutObj.id)
 })
 
 }

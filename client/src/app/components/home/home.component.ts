@@ -23,7 +23,7 @@ Huts: Array<any>= [];
                   if(data){
                     console.log('all huts', data)
                   this.Huts = data
-        console.log('ya object ma arhar hai',  this.Huts )
+        // console.log('ya object ma arhar hai',  this.Huts )
 
                   
                 }
@@ -36,7 +36,7 @@ Huts: Array<any>= [];
                  // ya code theik hai 
   }
    clickedMarker(mapMarker){
-    console.log(mapMarker)
+    // console.log(mapMarker)
   }
    hutdetail(hut, index){
     // let dates = hut.bookedDates.toString();

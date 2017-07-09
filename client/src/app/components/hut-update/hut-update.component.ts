@@ -19,9 +19,9 @@ export class HutUpdateComponent implements OnInit {
   ) {
 
  this.route.queryParams.subscribe((params: any) =>{
-      console.log('query params',params);
+      // console.log('query params',params);
       this.hut = params;
-      console.log(  'hghg',  this.hut.id)
+      // console.log(  'hghg',  this.hut.id)
 })
 
 }
@@ -40,9 +40,9 @@ updhut(){
          description: this.description 
 
   }
-     console.log('form',uphut,this.hut.id);
+    //  console.log('form',uphut,this.hut.id);
     this.hutService.updateHut(uphut,this.hut.id).subscribe(data =>{
-      console.log(data);
+      // console.log(data);
     })
 }
 

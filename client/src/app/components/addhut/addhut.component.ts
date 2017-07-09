@@ -111,11 +111,11 @@ addHut(){
       
 
   }
-              console.log("sspp",this.imgPaths);
+              // console.log("sspp",this.imgPaths);
 
     this.hutService.addhut(hut,   this.mapMarker).subscribe(data => {//
       if(data.success){
-            console.log(data);
+            // console.log(data);
 
               this._flashMessagesService.show('your hut add', { cssClass: 'alert-success' } );
       }else{

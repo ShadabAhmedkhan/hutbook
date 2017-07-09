@@ -12,7 +12,7 @@ user: Array<any>= [];
   constructor(private authService:AuthService) {
   this.authService.fetchUsers().subscribe(data =>{
  this.user = data ;
-console.log("all user",data);
+// console.log("all user",data);
     });    }
 
   ngOnInit() {

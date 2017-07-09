@@ -276,10 +276,10 @@ var AddhutComponent = (function () {
             description: this.description
             // imgPath:this.imgPaths
         };
-        console.log("sspp", this.imgPaths);
+        // console.log("sspp",this.imgPaths);
         this.hutService.addhut(hut, this.mapMarker).subscribe(function (data) {
             if (data.success) {
-                console.log(data);
+                // console.log(data);
                 _this._flashMessagesService.show('your hut add', { cssClass: 'alert-success' });
             }
             else {
@@ -328,7 +328,7 @@ var AlluserComponent = (function () {
         this.user = [];
         this.authService.fetchUsers().subscribe(function (data) {
             _this.user = data;
-            console.log("all user", data);
+            // console.log("all user",data);
         });
     }
     AlluserComponent.prototype.ngOnInit = function () {
@@ -424,7 +424,7 @@ var HomeComponent = (function () {
             if (data) {
                 console.log('all huts', data);
                 _this.Huts = data;
-                console.log('ya object ma arhar hai', _this.Huts);
+                // console.log('ya object ma arhar hai',  this.Huts )
             }
             else {
                 _this._flashMessagesService.show(data.msg, { cssClass: 'alert-danger', timeout: 3000 });
@@ -433,7 +433,7 @@ var HomeComponent = (function () {
         // ya code theik hai 
     }
     HomeComponent.prototype.clickedMarker = function (mapMarker) {
-        console.log(mapMarker);
+        // console.log(mapMarker)
     };
     HomeComponent.prototype.hutdetail = function (hut, index) {
         // let dates = hut.bookedDates.toString();
@@ -498,9 +498,9 @@ var HutUpdateComponent = (function () {
         this.hutService = hutService;
         this.route = route;
         this.route.queryParams.subscribe(function (params) {
-            console.log('query params', params);
+            // console.log('query params',params);
             _this.hut = params;
-            console.log('hghg', _this.hut.id);
+            // console.log(  'hghg',  this.hut.id)
         });
     }
     HutUpdateComponent.prototype.updhut = function () {
@@ -511,9 +511,9 @@ var HutUpdateComponent = (function () {
             rent: this.rent,
             description: this.description
         };
-        console.log('form', uphut, this.hut.id);
+        //  console.log('form',uphut,this.hut.id);
         this.hutService.updateHut(uphut, this.hut.id).subscribe(function (data) {
-            console.log(data);
+            // console.log(data);
         });
     };
     HutUpdateComponent.prototype.ngOnInit = function () {
@@ -566,9 +566,9 @@ var HutdetailComponent = (function () {
         this.lat = 24.860170;
         this.lng = 66.863662;
         this.route.queryParams.subscribe(function (params) {
-            console.log('query params', params);
+            // console.log('query params',params);
             _this.hutObj = params;
-            console.log('hghg', _this.hutObj.id);
+            // console.log(  'hghg',  this.hutObj.id)
         });
     }
     HutdetailComponent.prototype.ngOnInit = function () {
@@ -624,7 +624,7 @@ var MyhutsComponent = (function () {
         this.Huts = [];
         hutService.getUserHuts().subscribe(function (data) {
             if (data) {
-                console.log('my huts', data);
+                // console.log('my huts', data)
                 _this.Huts = data;
             }
             else {
@@ -634,10 +634,10 @@ var MyhutsComponent = (function () {
     }
     MyhutsComponent.prototype.delete = function (hut, index) {
         this.hutService.deleteHut(hut).subscribe(function (x) {
-            console.log('deleted', x);
+            // console.log('deleted',x)
         });
         this.Huts.splice(index, 1);
-        console.log('deleted', hut.id);
+        // console.log('deleted',hut.id)
     };
     MyhutsComponent.prototype.update = function (hut, index) {
         // let dates = hut.bookedDates.toString();
@@ -1002,7 +1002,7 @@ var AuthService = (function () {
         this.isDev = true;
     }
     AuthService.prototype.registerUser = function (user) {
-        console.log(user);
+        // console.log(user);
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         // let ep = this.prepEndpoint('users/register');
@@ -1250,7 +1250,7 @@ var HutService = (function () {
             imgPath: this.imgPaths,
             bookedDates: []
         };
-        console.log('datap', this.imgPaths);
+        //  console.log('datap', this.imgPaths);
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         // let ep = this.prepEndpoint('users/register');
@@ -1258,15 +1258,15 @@ var HutService = (function () {
             .map(function (res) { return res.json(); });
     };
     HutService.prototype.uploadImage = function (image) {
+        // console.log("ya han data mil raha hai", image[0]);
         var _this = this;
-        console.log("ya han data mil raha hai", image[0]);
         var formData = new FormData();
         // console.log('but formdata null arah hai', formData);
         // let images: Array<any> = imagesArray();
         formData.append('images', image[0]);
         // formData.append('uploads', image[0]);
-        console.log('dataaa', formData);
-        console.log('dataaq', formData.get('images'));
+        // console.log('dataaa',  formData);
+        // console.log('dataaq',formData.get('images'))
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         // headers.append('Content-Type', 'application/json');
         return this.http.post('https://meanapp-hutbooking.herokuapp.com/hut', formData, { headers: headers })
@@ -1299,7 +1299,7 @@ var HutService = (function () {
         var user = {
             email: userinfo.email
         };
-        console.log(userinfo.email);
+        // console.log(userinfo.email)
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         return this.http.get('https://meanapp-hutbooking.herokuapp.com/hut/huts/' + userinfo.email, { headers: headers })
@@ -1321,7 +1321,7 @@ var HutService = (function () {
         console.log('id', id);
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.put('/hut/update/' + id, hutInfo, { headers: headers })
+        return this.http.put('https://meanapp-hutbooking.herokuapp.com/hut/update/' + id, hutInfo, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     return HutService;
@@ -1380,7 +1380,7 @@ exports = module.exports = __webpack_require__(5)(false);
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "\n.card {\n    padding-top: 20px;\n    margin: 10px 0 20px 0;\n    background-color: rgba(214, 224, 226, 0.2);\n    border-top-width: 0;\n    border-bottom-width: 2px;\n    border-radius: 3px;\n    box-shadow: none;\n    box-sizing: border-box;\n}\n\n.card .card-heading {\n    padding: 0 20px;\n    margin: 0;\n}\n\n.card .card-heading.simple {\n    font-size: 20px;\n    font-weight: 300;\n    color: #777;\n    border-bottom: 1px solid #e5e5e5;\n}\n\n.card .card-heading.image img {\n    display: inline-block;\n    width: 46px;\n    height: 46px;\n    margin-right: 15px;\n    vertical-align: top;\n    border: 0;\n    border-radius: 50%;\n}\n\n.card .card-heading.image .card-heading-header {\n    display: inline-block;\n    vertical-align: top;\n}\n\n.card .card-heading.image .card-heading-header h3 {\n    margin: 0;\n    font-size: 14px;\n    line-height: 16px;\n    color: #262626;\n}\n\n.card .card-heading.image .card-heading-header span {\n    font-size: 12px;\n    color: #999999;\n}\n\n.card .card-body {\n    padding: 0 20px;\n    margin-top: 20px;\n}\n\n.card .card-media {\n    padding: 0 20px;\n    margin: 0 -14px;\n}\n\n.card .card-media img {\n    max-width: 100%;\n    max-height: 100%;\n}\n\n.card .card-actions {\n    min-height: 30px;\n    padding: 0 20px 20px 20px;\n    margin: 20px 0 0 0;\n}\n\n.card .card-comments {\n    padding: 20px;\n    margin: 0;\n    background-color: #f8f8f8;\n}\n\n.card .card-comments .comments-collapse-toggle {\n    padding: 0;\n    margin: 0 20px 12px 20px;\n}\n\n.card .card-comments .comments-collapse-toggle a,\n.card .card-comments .comments-collapse-toggle span {\n    padding-right: 5px;\n    overflow: hidden;\n    font-size: 12px;\n    color: #999;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n}\n\n.card-comments .media-heading {\n    font-size: 13px;\n    font-weight: bold;\n}\n\n.card.people {\n    position: relative;\n    display: inline-block;\n    width: 170px;\n    height: 300px;\n    padding-top: 0;\n    margin-left: 20px;\n    overflow: hidden;\n    vertical-align: top;\n}\n\n.card.people:first-child {\n    margin-left: 0;\n}\n\n.card.people .card-top {\n    position: absolute;\n    top: 0;\n    left: 0;\n    display: inline-block;\n    width: 170px;\n    height: 150px;\n    background-color: #ffffff;\n}\n\n.card.people .card-top.green {\n    background-color: #53a93f;\n}\n\n.card.people .card-top.blue {\n    background-color: #427fed;\n}\n\n.card.people .card-info {\n    position: absolute;\n    top: 150px;\n    display: inline-block;\n    width: 100%;\n    height: 101px;\n    overflow: hidden;\n    background: #ffffff;\n    box-sizing: border-box;\n}\n\n.card.people .card-info .title {\n    display: block;\n    margin: 8px 14px 0 14px;\n    overflow: hidden;\n    font-size: 16px;\n    font-weight: bold;\n    line-height: 18px;\n    color: #404040;\n}\n\n.card.people .card-info .desc {\n    display: block;\n    margin: 8px 14px 0 14px;\n    overflow: hidden;\n    font-size: 12px;\n    line-height: 16px;\n    color: #737373;\n    text-overflow: ellipsis;\n}\n\n.card.people .card-bottom {\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    display: inline-block;\n    width: 100%;\n    padding: 10px 20px;\n    line-height: 29px;\n    text-align: center;\n    box-sizing: border-box;\n}\n\n.card.hovercard {\n    position: relative;\n    padding-top: 0;\n    overflow: hidden;\n    text-align: center;\n    background-color: rgba(214, 224, 226, 0.2);\n}\n\n.card.hovercard .cardheader {\n    background: url(\"http://lorempixel.com/850/280/nature/4/\");\n    background-size: cover;\n    height: 135px;\n}\n\n.card.hovercard .avatar {\n    position: relative;\n    top: -50px;\n    margin-bottom: -50px;\n}\n\n.card.hovercard .avatar img {\n    width: 100px;\n    height: 100px;\n    max-width: 100px;\n    max-height: 100px;\n    border-radius: 50%;\n    border: 5px solid rgba(255,255,255,0.5);\n}\n\n.card.hovercard .info {\n    padding: 4px 8px 10px;\n}\n\n.card.hovercard .info .title {\n    margin-bottom: 4px;\n    font-size: 24px;\n    line-height: 1;\n    color: #262626;\n    vertical-align: middle;\n}\n\n.card.hovercard .info .desc {\n    overflow: hidden;\n    font-size: 12px;\n    line-height: 20px;\n    color: #737373;\n    text-overflow: ellipsis;\n}\n\n.card.hovercard .bottom {\n    padding: 0 20px;\n    margin-bottom: 17px;\n}\n\n.btn{ border-radius: 50%; width:32px; height:32px; line-height:18px;  }\n", ""]);
 
 // exports
 
@@ -1436,7 +1436,7 @@ module.exports = "<app-nav></app-nav>\n<div class=\"container\">\n          <fla
 /***/ 206:
 /***/ (function(module, exports) {
 
-module.exports = "\t<section id=\"contact\" style=\"\">\n            <div class=\"container\">\n                <!--<div class=\"row\">\n                    <div class=\"about_our_company\" style=\"margin-bottom: 20px;\">\n                        <h1 style=\"color:#fff;\">Write Your Message</h1>\n                        <div class=\"titleline-icon\"></div>\n                        <p style=\"color:#fff;\">Lorem Ipsum is simply dummy text of the printing and typesetting </p>\n                    </div>\n                </div>-->\n                <div class=\"row\">\n                    <div class=\"col-md-8\">\n                        <form (submit)=\"addHut()\">\n                            <div class=\"row\">\n                               <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <input type=\"text\" class=\"form-control\" placeholder=\"Your Name *\"   [(ngModel)]=\"name\" \n    name=\"name\"  required=\"\" data-validation-required-message=\"Please enter your name.\">\n                                        <p class=\"help-block text-danger\"></p>\n                                    </div>\n                                    <div class=\"form-group\">\n                                        <input type=\"email\" class=\"form-control\" placeholder=\"Your unit *\" [(ngModel)]=\"unit\" name=\"unit\"  required=\"\" data-validation-required-message=\"Please enter your email address.\">\n                                        <p class=\"help-block text-danger\"></p>\n                                    </div>\n                                    <div class=\"form-group\">\n                                        <input type=\"tel\" class=\"form-control\" placeholder=\"Your rooms *\" [(ngModel)]=\"rooms\" name=\"rooms\"  required=\"\" data-validation-required-message=\"Please enter your phone number.\">\n                                        <p class=\"help-block text-danger\"></p>\n                                    </div>\n                                </div>\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <input class=\"form-control\" placeholder=\"Your maxPersonAllowed *\" [(ngModel)]=\"maxPersonAllowed\" name=\"maxPersonAllowed\" required=\"\" data-validation-required-message=\"Please enter a message.\">\n                                        <p class=\"help-block text-danger\"></p>\n                                    </div>\n                                </div>\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <input class=\"form-control\" placeholder=\"Your address *\" [(ngModel)]=\"address\" name=\"address\" required=\"\" data-validation-required-message=\"Please enter a message.\">\n                                        <p class=\"help-block text-danger\"></p>\n                                    </div>\n                                </div>\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <input class=\"form-control\" placeholder=\"Your location *\" [(ngModel)]=\"location\" name=\"location\" required=\"\" data-validation-required-message=\"Please enter a message.\">\n                                        <p class=\"help-block text-danger\"></p>\n                                    </div>\n                                </div>\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <input class=\"form-control\" placeholder=\"Your rent *\" [(ngModel)]=\"rent\" name=\"rent\" required=\"\" data-validation-required-message=\"Please enter a message.\">\n                                    </div>\n                                </div>\n\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <input class=\"form-control\" placeholder=\"Your description *\" [(ngModel)]=\"description\" name=\"description\" required=\"\" data-validation-required-message=\"Please enter a message.\">\n                                        <p class=\"help-block text-danger\"></p>\n                                    </div>\n                                </div>\n                                  \t\t<div class=\"form-group\">\n\t\t\t<label><span>Choose Image</span><input type=\"file\" id=\"myFile\" name=\"imgPath\" (change)=\"onChange($event)\"></label>\n\t\t</div>\t\n                                <div class=\"clearfix\"></div>\n                                <div class=\"col-lg-12 text-center\">\n                                    <div id=\"success\"></div>\n                                    <button type=\"submit\" value=\"submit\" class=\"btn btn-xl get\">submit</button>\n                                </div>\n                            </div>\n                        </form>\n                    </div>\n                    <div class=\"col-md-4\">\n                        <!--<p style=\"color:black;\">\n                            <strong><i class=\"fa fa-map-marker\"></i> Address</strong><br>\n                            1216/Mirpur_10 Beach, Dhaka(Bangladesh)\n                        </p>\n                        <p style=\"color:#fff;\"><strong><i class=\"fa fa-phone\"></i> Phone Number</strong><br>\n                            (+8801)7123456</p>\n                        <p style=\"color:#fff;\">\n                            <strong><i class=\"fa fa-envelope\"></i>  Email Address</strong><br>\n                            Email@info.com</p>\n                        <p></p>-->\n                          <div class=\"form-group\">\n\t\t<sebm-google-map \n[latitude]=\"lat\" \n[longitude]=\"lng\"\n[zoom]=\"zoom\"\n[disableDefaultUI]=\"false\"\n[zoomControl]=\"true\"\n(mapClick)=\"mapClicked($event)\">\n\n  <sebm-google-map-marker\n  *ngIf = \"mapMarker\"\n  (markerClick)=\"clickedMarker(mapMarker)\" \n  [latitude]=\"mapMarker.lat\" \n  [longitude]=\"mapMarker.lng\"\n  [markerDraggable]=\"mapMarker.draggable\"\n  (dragEnd)=\"markerDragEnd(mapMarker, $event)\">\n\n  <sebm-google-map-info-window>\n    <strong>{{name}}</strong>\n  </sebm-google-map-info-window>\n  \n  </sebm-google-map-marker>\n</sebm-google-map>\n\t</div>\t\n                    </div>\n                </div>\n            </div>\n        </section>"
+module.exports = "\t<section id=\"contact\" style=\"\">\n            <div class=\"container\">\n                <!--<div class=\"row\">\n                    <div class=\"about_our_company\" style=\"margin-bottom: 20px;\">\n                        <h1 style=\"color:#fff;\">Write Your Message</h1>\n                        <div class=\"titleline-icon\"></div>\n                        <p style=\"color:#fff;\">Lorem Ipsum is simply dummy text of the printing and typesetting </p>\n                    </div>\n                </div>-->\n                <div class=\"row\">\n                    <div class=\"col-md-8\">\n                        <form (submit)=\"addHut()\">\n                            <div class=\"row\">\n                               <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <input type=\"text\" class=\"form-control\" placeholder=\"Your Name *\"   [(ngModel)]=\"name\" \n    name=\"name\"  required=\"\" data-validation-required-message=\"Please enter your name.\">\n                                        <p class=\"help-block text-danger\"></p>\n                                    </div>\n                                    <div class=\"form-group\">\n                                        <input type=\"email\" class=\"form-control\" placeholder=\"Your unit *\" [(ngModel)]=\"unit\" name=\"unit\"  required=\"\" data-validation-required-message=\"Please enter your email address.\">\n                                        <p class=\"help-block text-danger\"></p>\n                                    </div>\n                                    <div class=\"form-group\">\n                                        <input type=\"tel\" class=\"form-control\" placeholder=\"Your rooms *\" [(ngModel)]=\"rooms\" name=\"rooms\"  required=\"\" data-validation-required-message=\"Please enter your phone number.\">\n                                        <p class=\"help-block text-danger\"></p>\n                                    </div>\n                                </div>\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <input class=\"form-control\" placeholder=\"Your maxPersonAllowed *\" [(ngModel)]=\"maxPersonAllowed\" name=\"maxPersonAllowed\" required=\"\" data-validation-required-message=\"Please enter a message.\">\n                                        <p class=\"help-block text-danger\"></p>\n                                    </div>\n                                </div>\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <input class=\"form-control\" placeholder=\"Your address *\" [(ngModel)]=\"address\" name=\"address\" required=\"\" data-validation-required-message=\"Please enter a message.\">\n                                        <p class=\"help-block text-danger\"></p>\n                                    </div>\n                                </div>\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <input class=\"form-control\" placeholder=\"Your location *\" [(ngModel)]=\"location\" name=\"location\" required=\"\" data-validation-required-message=\"Please enter a message.\">\n                                        <p class=\"help-block text-danger\"></p>\n                                    </div>\n                                </div>\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <input class=\"form-control\" placeholder=\"Your rent *\" [(ngModel)]=\"rent\" name=\"rent\" required=\"\" data-validation-required-message=\"Please enter a message.\">\n                                    </div>\n                                </div>\n\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <input class=\"form-control\" placeholder=\"Your description *\" [(ngModel)]=\"description\" name=\"description\" required=\"\" data-validation-required-message=\"Please enter a message.\">\n                                        <p class=\"help-block text-danger\"></p>\n                                    </div>\n                                </div>\n        <!--<div class=\"form-group\">\n\t\t\t<label><span>Choose Image</span><input type=\"file\" id=\"myFile\" name=\"imgPath\" (change)=\"onChange($event)\"></label>\n\t\t</div>\t-->\n                                <div class=\"clearfix\"></div>\n                                <div class=\"col-lg-12 text-center\">\n                                    <div id=\"success\"></div>\n                                    <button type=\"submit\" value=\"submit\" class=\"btn btn-xl get\">submit</button>\n                                </div>\n                            </div>\n                        </form>\n                    </div>\n                    <div class=\"col-md-4\">\n                        <!--<p style=\"color:black;\">\n                            <strong><i class=\"fa fa-map-marker\"></i> Address</strong><br>\n                            1216/Mirpur_10 Beach, Dhaka(Bangladesh)\n                        </p>\n                        <p style=\"color:#fff;\"><strong><i class=\"fa fa-phone\"></i> Phone Number</strong><br>\n                            (+8801)7123456</p>\n                        <p style=\"color:#fff;\">\n                            <strong><i class=\"fa fa-envelope\"></i>  Email Address</strong><br>\n                            Email@info.com</p>\n                        <p></p>-->\n                          <div class=\"form-group\">\n\t\t<sebm-google-map \n[latitude]=\"lat\" \n[longitude]=\"lng\"\n[zoom]=\"zoom\"\n[disableDefaultUI]=\"false\"\n[zoomControl]=\"true\"\n(mapClick)=\"mapClicked($event)\">\n\n  <sebm-google-map-marker\n  *ngIf = \"mapMarker\"\n  (markerClick)=\"clickedMarker(mapMarker)\" \n  [latitude]=\"mapMarker.lat\" \n  [longitude]=\"mapMarker.lng\"\n  [markerDraggable]=\"mapMarker.draggable\"\n  (dragEnd)=\"markerDragEnd(mapMarker, $event)\">\n\n  <sebm-google-map-info-window>\n    <strong>{{name}}</strong>\n  </sebm-google-map-info-window>\n  \n  </sebm-google-map-marker>\n</sebm-google-map>\n\t</div>\t\n                    </div>\n                </div>\n            </div>\n        </section>"
 
 /***/ }),
 
@@ -1464,7 +1464,7 @@ module.exports = "<div class=\"hut-margi\">\n<div class=\"container col-md-4 col
 /***/ 210:
 /***/ (function(module, exports) {
 
-module.exports = "\n\n<hr><hr>\n<li>  {{hut.name}}\n\n</li>\n        <h2 class=\"page-header\">Register</h2>\n<form (submit)=\"updhut()\"\n>\n          <!--<div id=\"div_id_email\" class=\"form-group required\">\n                            <label  class=\"control-label col-md-4  requiredField\">Name: <span class=\"asteriskField\">*</span> </label>\n                            <div class=\"controls col-md-8 \">\n                                <input\n                                 class=\"input-md emailinput form-control\" \n                                [value]=\"hut.name\" \n                                name=\"name\"\n                                 placeholder=\"Your hut name\"\n                                  style=\"margin-bottom: 10px\"\n                                   type=\"text\"\n                                     />\n                            </div>     \n                        </div>-->\n              \n  <div class=\"form-group\" >\n    <label>Name</label>\n    <input type=\"text\"\n    name=\"name\" \n    \n    ng-model=\"hut.name\"\n    />\n  </div>\n\n\n    <div class=\"form-group\">\n    <label>rooms</label>\n    <input type=\"text\" \n   ng-model=\"hut.rooms\" \n    name=\"rooms\" \n    class=\"form-control\">\n  </div>\n    <div class=\"form-group\">\n    <label>maxPersonAllowed</label>\n    <input type=\"text\"\n      ng-model=\"hut.maxPersonAllowed\" \n       name=\"maxPersonAllowed\" \n       class=\"form-control\">\n  </div>\n  \n   \n    <div class=\"form-group\">\n    <label>rent</label>\n    <input type=\"text\"\n    name=\"rent\"\n   [(ngModel)]=\"name\" \n     class=\"form-control\">\n  </div>\n    <div class=\"form-group\">\n    <label>description</label>\n    <input type=\"text\" \n   \n   ng-model=\"hut.description\"\n     name=\"description\" \n      class=\"form-control\">\n  </div>\n   <!--<div class=\"form-group\">\n\t\t\t<label><span>Choose Image</span><input type=\"file\" id=\"myFile\" (change)=\"onChange($event)\"></label>\n\t\t</div>-->\n  \n  <input type=\"submit\" value=\"submit\" class=\"btn btn-primary\">\n</form>\n<!--up code not work corect-->\n\n<!--<hr>\n        <div class=\"col-lg-12\">\n            <div>\n                <input type=\"date\" name=\"booking\" (change)=\"onChange($event)\" #date>              \n                <button  class=\"btn btn-primary btn-sm\" (click)=\"bookReservation(date)\" [disabled]=\"!flag\">Book</button>\n            </div>\n        </div> -->\n\n<hr><hr>\n\n        <h2 class=\"page-header\">Register</h2>\n<form (submit)=\"updhut()\"\n>\n  <div class=\"form-group\" >\n    <label>Name</label>\n    <input type=\"text\"\n    \n    [(ngModel)]=\"name\" \n    name=\"name\" \n[value]=\"hut.name\"    class=\"form-control\"/>\n  </div>\n\n\n    <div class=\"form-group\">\n    <label>rooms</label>\n    <input type=\"text\" [(ngModel)]=\"rooms\"    name=\"rooms\" class=\"form-control\">\n  </div>\n    <div class=\"form-group\">\n    <label>maxPersonAllowed</label>\n    <input type=\"text\" [(ngModel)]=\"maxPersonAllowed\" name=\"maxPersonAllowed\" class=\"form-control\">\n  </div>\n  \n   \n    <div class=\"form-group\">\n    <label>rent</label>\n    <input type=\"text\" [(ngModel)]=\"rent\" name=\"rent\"  class=\"form-control\">\n  </div>\n    <div class=\"form-group\">\n    <label>description</label>\n    <input type=\"text\" [(ngModel)]=\"description\" name=\"description\"  class=\"form-control\">\n  </div>\n  \t<!--<div class=\"form-group\">\n\t\t\t<label><span>Choose Image</span><input type=\"file\" id=\"myFile\" (change)=\"onChange($event)\"></label>\n\t\t</div>-->\n  \n  <input type=\"submit\" value=\"submit\" class=\"btn btn-primary\">\n</form>"
+module.exports = "\n<hr><hr>\n\n        <h2 class=\"page-header\">Register1</h2>\n<form (submit)=\"updhut()\"\n>\n  <div class=\"form-group\" >\n    <label>Name</label>\n    <input type=\"text\"\n    \n    [(ngModel)]=\"name\" \n    name=\"name\" \n  class=\"form-control\"/>\n  </div>\n\n\n    <div class=\"form-group\">\n    <label>rooms</label>\n    <input type=\"text\" [(ngModel)]=\"rooms\"    name=\"rooms\" class=\"form-control\">\n  </div>\n    <div class=\"form-group\">\n    <label>maxPersonAllowed</label>\n    <input type=\"text\" [(ngModel)]=\"maxPersonAllowed\" name=\"maxPersonAllowed\" class=\"form-control\">\n  </div>\n  \n   \n    <div class=\"form-group\">\n    <label>rent</label>\n    <input type=\"text\" [(ngModel)]=\"rent\" name=\"rent\"  class=\"form-control\">\n  </div>\n    <div class=\"form-group\">\n    <label>description</label>\n    <input type=\"text\" [(ngModel)]=\"description\" name=\"description\"  class=\"form-control\">\n  </div>\n  \t<!--<div class=\"form-group\">\n\t\t\t<label><span>Choose Image</span><input type=\"file\" id=\"myFile\" (change)=\"onChange($event)\"></label>\n\t\t</div>-->\n  \n  <input type=\"submit\" value=\"submit\" class=\"btn btn-primary\">\n</form>"
 
 /***/ }),
 
@@ -1492,7 +1492,7 @@ module.exports = "  <!-- Fixed navbar -->\n    <nav class=\"navbar navbar-invers
 /***/ 214:
 /***/ (function(module, exports) {
 
-module.exports = "<!--<div *ngIf=\"user\">\n  <h2 class=\"page-header\">{{user.name}}</h2>\n<ul class=\"list-group\">\n  <li class=\"list-group-item\">Username:{{user.username}}</li>\n  <li class=\"list-group-item\">Username:{{user.email}}</li>\n  <!--<li class=\"list-group-item\">Username:{{user.name}}</li>\n  <li class=\"list-group-item\">Username:{{user.passw  <!--<li class=\"list-group-item\">Username:{{user.name}}</li>\n  <li class=\"list-group-item\">Username:{{user.password}}</li>ord}}</li>\n  \n</ul>\n</div>-->\n\n<div class=\"col-lg-12 col-sm-9\" *ngIf=\"user\">\n    <div class=\"card hovercard\">\n        <div class=\"card-background\">\n            <!--<img class=\"card-bkimg\" alt=\"\" src=\"http://lorempixel.com/100/100/people/9/\">-->\n            <!-- http://lorempixel.com/850/280/people/9/ -->\n        </div>\n        <div class=\"useravatar\">\n            <!--<img alt=\"\" src=\"https://thetab.com/blogs.dir/48/files/2014/02/fb-profile.gif\">-->\n        </div>\n        <div class=\"card-info\"> <span class=\"card-title\">{{user.name}}</span>\n\n        </div>\n    </div>\n    <div class=\"btn-pref btn-group btn-group-justified btn-group-lg\" role=\"group\" aria-label=\"...\">\n        <div class=\"btn-group\" role=\"group\">\n            <button type=\"button\" id=\"stars\" class=\"btn btn-primary\" href=\"#tab1\" data-toggle=\"tab\"><span class=\"glyphicon glyphicon-star\" aria-hidden=\"true\"></span>\n                <div class=\"hidden-xs\">name</div>\n            </button>\n        </div>\n        <div class=\"btn-group\" role=\"group\">\n            <button type=\"button\" id=\"favorites\" class=\"btn btn-default\" href=\"#tab2\" data-toggle=\"tab\"><span class=\"glyphicon glyphicon-heart\" aria-hidden=\"true\"></span>\n                <div class=\"hidden-xs\">username</div>\n            </button>\n        </div>\n        <div class=\"btn-group\" role=\"group\">\n            <button type=\"button\" id=\"following\" class=\"btn btn-default\" href=\"#tab3\" data-toggle=\"tab\"><span class=\"glyphicon glyphicon-user\" aria-hidden=\"true\"></span>\n                <div class=\"hidden-xs\">email</div>\n            </button>\n        </div>\n    </div>\n\n        <div class=\"well \">\n      <div class=\"tab-content \">\n        <div class=\"tab-pane fade in active\" id=\"tab1\">\n          <h3>{{user.name}}</h3>\n        </div>\n        <div class=\"tab-pane fade in\" id=\"tab2\">\n          <h3>{{user.username}}</h3>\n        </div>\n        <div class=\"tab-pane fade in\" id=\"tab3\">\n          <h3>{{user.email}}</h3>\n        </div>\n      </div>\n    </div>\n    </div>\n\n"
+module.exports = "\n<div class=\"container\" *ngIf=\"user\">\n\t<div class=\"row\">\n\t\t<div class=\"col-lg-3 col-sm-6\">\n\n            <div class=\"card hovercard\">\n                <div class=\"cardheader\">\n\n                </div>\n                <div class=\"avatar\">\n                    <img alt=\"\" src=\"http://lorempixel.com/100/100/people/9/\">\n                </div>\n                <div class=\"info\">\n                    <div class=\"title\">\n                        <a target=\"_blank\" href=\"http://scripteden.com/\">Script Eden</a>\n                    </div>\n                    <div class=\"desc\">{{user.name}}</div>\n                    <div class=\"desc\">{{user.username}}</div>\n                    <div class=\"desc\">{{user.email}}</div>\n                </div>\n                <div class=\"bottom\">\n                    <a class=\"btn btn-primary btn-twitter btn-sm\" href=\"https://twitter.com/webmaniac\">\n                        <i class=\"fa fa-twitter\"></i>\n                    </a>\n                    <a class=\"btn btn-danger btn-sm\" rel=\"publisher\"\n                       href=\"https://plus.google.com/+ahmshahnuralam\">\n                        <i class=\"fa fa-google-plus\"></i>\n                    </a>\n                    <a class=\"btn btn-primary btn-sm\" rel=\"publisher\"\n                       href=\"https://plus.google.com/shahnuralam\">\n                        <i class=\"fa fa-facebook\"></i>\n                    </a>\n                    <a class=\"btn btn-warning btn-sm\" rel=\"publisher\" href=\"https://plus.google.com/shahnuralam\">\n                        <i class=\"fa fa-behance\"></i>\n                    </a>\n                </div>\n            </div>\n\n        </div>\n\n\t</div>\n</div>"
 
 /***/ }),
 

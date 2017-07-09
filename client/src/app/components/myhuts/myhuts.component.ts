@@ -21,7 +21,7 @@ export class MyhutsComponent implements OnInit {
   {
       hutService.getUserHuts().subscribe(data  => {
          if(data){
-        console.log('my huts', data)
+        // console.log('my huts', data)
       this.Huts =data;
      
 
@@ -33,10 +33,10 @@ export class MyhutsComponent implements OnInit {
   }
    delete(hut, index){
     this.hutService.deleteHut(hut).subscribe(x =>{
-      console.log('deleted',x)
+      // console.log('deleted',x)
     });
     this.Huts.splice(index, 1);
-          console.log('deleted',hut.id)
+          // console.log('deleted',hut.id)
 
   }
 

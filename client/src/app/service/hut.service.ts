@@ -45,7 +45,7 @@ imgPath :this.imgPaths,
       bookedDates: []
       
     }
-       console.log('datap', this.imgPaths);
+      //  console.log('datap', this.imgPaths);
 
     let headers = new Headers();
     headers.append('Content-Type','application/json');
@@ -57,7 +57,7 @@ imgPath :this.imgPaths,
 
    }
 uploadImage(image){
-  console.log("ya han data mil raha hai", image[0]);
+  // console.log("ya han data mil raha hai", image[0]);
 
   var formData: any = new FormData();
     // console.log('but formdata null arah hai', formData);
@@ -66,8 +66,8 @@ uploadImage(image){
   // let images: Array<any> = imagesArray();
   formData.append('images', image[0]);
   // formData.append('uploads', image[0]);
-  console.log('dataaa',  formData);
-console.log('dataaq',formData.get('images'))
+  // console.log('dataaa',  formData);
+// console.log('dataaq',formData.get('images'))
   
   let headers = new Headers();
     // headers.append('Content-Type', 'application/json');
@@ -104,7 +104,7 @@ getUserHuts(){
     let user = {
       email: userinfo.email
     };
-    console.log(userinfo.email)
+    // console.log(userinfo.email)
    let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     return this.http.get('https://meanapp-hutbooking.herokuapp.com/hut/huts/'+userinfo.email, {headers: headers})
@@ -140,7 +140,7 @@ updateHut(hutInfo,id){
   console.log('id', id )
   let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.put('/hut/update/'+id,hutInfo , {headers: headers})
+    return this.http.put('https://meanapp-hutbooking.herokuapp.com/hut/update/'+id,hutInfo , {headers: headers})
     .map(res => res.json());
 }
 }
