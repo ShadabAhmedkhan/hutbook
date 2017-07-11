@@ -21,7 +21,7 @@ export class MyhutsComponent implements OnInit {
   {
       hutService.getUserHuts().subscribe(data  => {
          if(data){
-        // console.log('my huts', data)
+        console.log('my huts', data)
       this.Huts =data;
      
 

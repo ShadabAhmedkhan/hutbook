@@ -3,6 +3,7 @@ import { FlashMessagesService } from 'angular2-flash-messages';
 import { HutService } from './../../service/hut.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl, AbstractControl} from '@angular/forms';
+import { ValidateService } from './../../service/validate.service';
 
 @Component({
   selector: 'app-addhut',
@@ -35,6 +36,7 @@ export class AddhutComponent implements OnInit {
   constructor(  private _flashMessagesService: FlashMessagesService,
   private hutService:HutService,
   private router:Router,
+  private validate:ValidateService
   // private _formBuilder:FormBuilder 
   ) { 
     //  this.HutForm= this._formBuilder.group({ 
@@ -108,10 +110,15 @@ addHut(){
          description: this.description
       // imgPath:this.imgPaths
 
-      
-
+   
   }
-              // console.log("sspp",this.imgPaths);
+            console.log(hut);
+      //all filed
+    if(!this.validate.ValidateRegister(hut)){
+      this._flashMessagesService.show('plzzz fill all fields',{ cssClass: 'alert-danger' } );
+      return false;
+    }
+       // console.log("sspp",this.imgPaths);
 
     this.hutService.addhut(hut,   this.mapMarker).subscribe(data => {//
       if(data.success){

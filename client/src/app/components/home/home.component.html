@@ -1,38 +1,5 @@
-<div class="hut-margi">
-<div class="container col-md-4 col-sm-6" *ngFor="let Huts of Huts; let i=index">
-<div class="card hovercard">
-   <img src="http://placehold.it/300x200/000000/&text=Header" alt=""/>
-   <div class="avatar">
-      <img src="http://placehold.it/80X80/333333/&text=Head" alt="" />
-   </div>
-   <div class="info" >
-      <div class="title">
-         The Title
-      </div>
-       <!--<img src="data:image/jpeg;base64,{{hut.base64Img[0]}}" class="img-responsive" alt="aaaaaaaaaaaaaa" />-->
-
-      <div class="desc"><p>name:{{Huts.name}}</p></div>
-      <div class="desc">address:{{Huts.address}}</div>
-      <div class="desc">unit:{{Huts.unit}}</div>
-       <div class="desc"><p>rent:{{Huts.rent}}</p></div>
-      <div class="desc"><p>rooms:{{Huts.rooms}}</p></div>
-      <div class="desc">imgPath:{{Huts.imgPath}}</div>
-       <div class="desc"><p>description:{{Huts.description}}</p>
-</div>
-      <div class="desc"><p>location:{{Huts.location}}</p>
-</div>
-      <div class="desc"><p>maxPersonAllowed:{{Huts.maxPersonAllowed}}</p></div>
-   </div>
-   <div class="bottom">
-<a class="btn btn-default"(click)="hutdetail(Huts, i)">Edit</a>   </div>
-</div>
-</div>
-
-</div>
-
-
-<!--map-->
-<div class="container col-sm-12">
+	<!--map-->
+<div align="center" class="container col-sm-12 map-style ">
 		<sebm-google-map 
 [latitude]="lat" 
 [longitude]="lng"
@@ -68,4 +35,32 @@
   </sebm-google-map-marker>
 </sebm-google-map>
 	</div>
-          
+	<div class="container home-panel">
+      <div class="row">
+        
+        <div class="col-xs-3" *ngFor="let Huts of Huts; let i=index">
+			<div class="project project-default">
+				<div class="shape">
+					<div class="shape-text">
+						top								
+					</div>
+				</div>
+				<div class="project-content">
+					<h3 class="lead">
+					   <img src="http://placehold.it/300x200/000000/&text=Header" height="100" width="100" alt=""/>
+
+					</h3>
+					      <div class="desc"><p>name:{{Huts.name}}</p></div>
+      <div class="desc"><p>location:{{Huts.location}}</p></div>
+       <div class="desc"><p>rent:{{Huts.rent}}</p></div>
+
+		
+				</div>
+          <div class="bottom bot-right">
+<a class="btn btn-default"(click)="hutdetail(Huts, i)">read more</a>
+   </div>
+			</div>
+       
+		</div>
+      </div>
+</div>
