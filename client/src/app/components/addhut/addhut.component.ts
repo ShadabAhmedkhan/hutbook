@@ -114,8 +114,8 @@ addHut(){
   }
             console.log(hut);
       //all filed
-    if(!this.validate.ValidateRegister(hut)){
-      this._flashMessagesService.show('plzzz fill all fields',{ cssClass: 'alert-danger' } );
+    if(this.validate.ValidateRegister(hut)){
+      this._flashMessagesService.show('Please fill all fields',{ cssClass: 'alert-danger' } );
       return false;
     }
        // console.log("sspp",this.imgPaths);
