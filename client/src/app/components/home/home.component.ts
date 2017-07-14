@@ -17,23 +17,15 @@ export class HomeComponent implements OnInit {
 Huts: Array<any>= [];
   constructor(private _flashMessagesService: FlashMessagesService,
   private hutService:HutService, private route: Router) {
-// ya code theik hai 
-
                 hutService.fetchHuts().subscribe(data => {
                   if(data){
                     console.log('all huts', data)
                   this.Huts = data
-        // console.log('ya object ma arhar hai',  this.Huts )
-
-                  
-                }
-                
-     
+                  }
                   else{
                     this._flashMessagesService.show(data.msg, {cssClass: 'alert-danger' , timeout:3000})
                   }
                 })
-                 // ya code theik hai 
   }
    clickedMarker(mapMarker){
     // console.log(mapMarker)
@@ -44,28 +36,19 @@ Huts: Array<any>= [];
       queryParams:{
         id: hut.id,
         name: hut.name,
-       
         rooms: hut.rooms,
         maxPersonAllowed: hut.maxPersonAllowed,
-       
         rent: hut.rent,
-
-         unit:hut.unit,
-          address:hut.address,
-          location:hut.location,
-          latitude:hut.latitude,
-         longitude: hut.longitude,
-         description: hut.description
+        unit:hut.unit,
+        address:hut.address,
+        location:hut.location,
+        latitude:hut.latitude,
+        longitude: hut.longitude,
+        description: hut.description
       }
-
     }
-
     this.route.navigate(['hutdetail', index+1],navigationExtras)
   }
-
   ngOnInit() {
   }
-  
-  
-
 }

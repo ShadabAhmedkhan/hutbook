@@ -13,9 +13,9 @@ export class HutdetailComponent implements OnInit {
   hutObj: any;
   flag;
   reservedDates:any;
-      zoom: number = 15;
-   longitude:number;
-   latitude:number;
+  zoom: number = 15;
+  longitude:number;
+  latitude:number;
   lat: number = 24.860170;
   lng: number = 66.863662;
   constructor(private route: ActivatedRoute, private hutService: HutService) {  
