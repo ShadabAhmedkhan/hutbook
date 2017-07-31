@@ -9,7 +9,7 @@ webpackJsonp([2,4],{
 var content = __webpack_require__(193);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(251)(content, {});
+var update = __webpack_require__(252)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -42,7 +42,7 @@ exports.push([module.i, "/* You can add global styles to this file, and also imp
 
 /***/ }),
 
-/***/ 251:
+/***/ 252:
 /***/ (function(module, exports) {
 
 /*
@@ -295,7 +295,7 @@ function updateLink(linkElement, obj) {
 
 /***/ }),
 
-/***/ 255:
+/***/ 256:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(111);
@@ -386,5 +386,5 @@ function toComment(sourceMap) {
 
 /***/ })
 
-},[255]);
+},[256]);
 //# sourceMappingURL=styles.bundle.js.map

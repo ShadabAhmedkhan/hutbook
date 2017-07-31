@@ -65,7 +65,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-root',
-        template: __webpack_require__(206),
+        template: __webpack_require__(207),
         styles: [__webpack_require__(194)],
         animations: [
             __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["a" /* trigger */])('slideInOut', [
@@ -90,7 +90,7 @@ AppComponent = __decorate([
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(114);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(31);
@@ -103,18 +103,19 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_angular2_flash_messages__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_angular2_google_maps_core__ = __webpack_require__(137);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_angular2_google_maps_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_angular2_google_maps_core__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__app_component__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_addhut_addhut_component__ = __webpack_require__(118);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_alluser_alluser_component__ = __webpack_require__(119);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_dashboard_dashboard_component__ = __webpack_require__(120);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_home_home_component__ = __webpack_require__(121);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_hutdetail_hutdetail_component__ = __webpack_require__(123);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_sign_in_sign_in_component__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_sign_up_sign_up_component__ = __webpack_require__(128);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_myhuts_myhuts_component__ = __webpack_require__(124);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_nav_nav_component__ = __webpack_require__(125);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_hut_update_hut_update_component__ = __webpack_require__(122);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_profile_profile_component__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_ng2_adsense__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__app_component__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_addhut_addhut_component__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_alluser_alluser_component__ = __webpack_require__(119);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_dashboard_dashboard_component__ = __webpack_require__(120);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_home_home_component__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_hutdetail_hutdetail_component__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_sign_in_sign_in_component__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_sign_up_sign_up_component__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_myhuts_myhuts_component__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_nav_nav_component__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_hut_update_hut_update_component__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__components_profile_profile_component__ = __webpack_require__(126);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -146,18 +147,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var appRoutes = [
-    { path: '', component: __WEBPACK_IMPORTED_MODULE_15__components_home_home_component__["a" /* HomeComponent */] },
-    { path: 'SignUp', component: __WEBPACK_IMPORTED_MODULE_18__components_sign_up_sign_up_component__["a" /* SignUpComponent */] },
-    { path: 'SignIn', component: __WEBPACK_IMPORTED_MODULE_17__components_sign_in_sign_in_component__["a" /* SignInComponent */] },
-    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_14__components_dashboard_dashboard_component__["a" /* DashboardComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_8__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: '', component: __WEBPACK_IMPORTED_MODULE_16__components_home_home_component__["a" /* HomeComponent */] },
+    { path: 'SignUp', component: __WEBPACK_IMPORTED_MODULE_19__components_sign_up_sign_up_component__["a" /* SignUpComponent */] },
+    { path: 'SignIn', component: __WEBPACK_IMPORTED_MODULE_18__components_sign_in_sign_in_component__["a" /* SignInComponent */] },
+    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_15__components_dashboard_dashboard_component__["a" /* DashboardComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_8__guards_auth_guard__["a" /* AuthGuard */]] },
     // {path:'profile', component: ProfileComponent},//,canActivate:[AuthGuard]
-    { path: 'addhuts', component: __WEBPACK_IMPORTED_MODULE_12__components_addhut_addhut_component__["a" /* AddhutComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_8__guards_auth_guard__["a" /* AuthGuard */]] },
-    { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_22__components_profile_profile_component__["a" /* ProfileComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_8__guards_auth_guard__["a" /* AuthGuard */]] },
-    { path: 'alluser', component: __WEBPACK_IMPORTED_MODULE_13__components_alluser_alluser_component__["a" /* AlluserComponent */] },
-    { path: 'myhuts', component: __WEBPACK_IMPORTED_MODULE_19__components_myhuts_myhuts_component__["a" /* MyhutsComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_8__guards_auth_guard__["a" /* AuthGuard */]] },
-    { path: 'update/:id', component: __WEBPACK_IMPORTED_MODULE_21__components_hut_update_hut_update_component__["a" /* HutUpdateComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_8__guards_auth_guard__["a" /* AuthGuard */]] },
-    { path: 'hutdetail/:id', component: __WEBPACK_IMPORTED_MODULE_16__components_hutdetail_hutdetail_component__["a" /* HutdetailComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_8__guards_auth_guard__["a" /* AuthGuard */]] }
+    { path: 'addhuts', component: __WEBPACK_IMPORTED_MODULE_13__components_addhut_addhut_component__["a" /* AddhutComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_8__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_23__components_profile_profile_component__["a" /* ProfileComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_8__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'alluser', component: __WEBPACK_IMPORTED_MODULE_14__components_alluser_alluser_component__["a" /* AlluserComponent */] },
+    { path: 'myhuts', component: __WEBPACK_IMPORTED_MODULE_20__components_myhuts_myhuts_component__["a" /* MyhutsComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_8__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'update/:id', component: __WEBPACK_IMPORTED_MODULE_22__components_hut_update_hut_update_component__["a" /* HutUpdateComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_8__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'hutdetail/:id', component: __WEBPACK_IMPORTED_MODULE_17__components_hutdetail_hutdetail_component__["a" /* HutdetailComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_8__guards_auth_guard__["a" /* AuthGuard */]] }
 ];
 var AppModule = (function () {
     function AppModule() {
@@ -167,18 +169,18 @@ var AppModule = (function () {
 AppModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_11__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_12__components_addhut_addhut_component__["a" /* AddhutComponent */],
-            __WEBPACK_IMPORTED_MODULE_13__components_alluser_alluser_component__["a" /* AlluserComponent */],
-            __WEBPACK_IMPORTED_MODULE_14__components_dashboard_dashboard_component__["a" /* DashboardComponent */],
-            __WEBPACK_IMPORTED_MODULE_15__components_home_home_component__["a" /* HomeComponent */],
-            __WEBPACK_IMPORTED_MODULE_16__components_hutdetail_hutdetail_component__["a" /* HutdetailComponent */],
-            __WEBPACK_IMPORTED_MODULE_17__components_sign_in_sign_in_component__["a" /* SignInComponent */],
-            __WEBPACK_IMPORTED_MODULE_18__components_sign_up_sign_up_component__["a" /* SignUpComponent */],
-            __WEBPACK_IMPORTED_MODULE_19__components_myhuts_myhuts_component__["a" /* MyhutsComponent */],
-            __WEBPACK_IMPORTED_MODULE_20__components_nav_nav_component__["a" /* NavComponent */],
-            __WEBPACK_IMPORTED_MODULE_21__components_hut_update_hut_update_component__["a" /* HutUpdateComponent */],
-            __WEBPACK_IMPORTED_MODULE_22__components_profile_profile_component__["a" /* ProfileComponent */]
+            __WEBPACK_IMPORTED_MODULE_12__app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__components_addhut_addhut_component__["a" /* AddhutComponent */],
+            __WEBPACK_IMPORTED_MODULE_14__components_alluser_alluser_component__["a" /* AlluserComponent */],
+            __WEBPACK_IMPORTED_MODULE_15__components_dashboard_dashboard_component__["a" /* DashboardComponent */],
+            __WEBPACK_IMPORTED_MODULE_16__components_home_home_component__["a" /* HomeComponent */],
+            __WEBPACK_IMPORTED_MODULE_17__components_hutdetail_hutdetail_component__["a" /* HutdetailComponent */],
+            __WEBPACK_IMPORTED_MODULE_18__components_sign_in_sign_in_component__["a" /* SignInComponent */],
+            __WEBPACK_IMPORTED_MODULE_19__components_sign_up_sign_up_component__["a" /* SignUpComponent */],
+            __WEBPACK_IMPORTED_MODULE_20__components_myhuts_myhuts_component__["a" /* MyhutsComponent */],
+            __WEBPACK_IMPORTED_MODULE_21__components_nav_nav_component__["a" /* NavComponent */],
+            __WEBPACK_IMPORTED_MODULE_22__components_hut_update_hut_update_component__["a" /* HutUpdateComponent */],
+            __WEBPACK_IMPORTED_MODULE_23__components_profile_profile_component__["a" /* ProfileComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -187,13 +189,17 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_10_angular2_google_maps_core__["AgmCoreModule"].forRoot({
                 apiKey: 'AIzaSyAOWMIcTqIC1hHbdjRpRi1Tr1un_BomQss',
             }),
+            __WEBPACK_IMPORTED_MODULE_11_ng2_adsense__["a" /* AdsenseModule */].forRoot({
+                adClient: 'ca-pub-1895109071827119',
+                adSlot: 6278796456 //replace with your slot from google adsense
+            }),
             __WEBPACK_IMPORTED_MODULE_3__angular_http__["HttpModule"],
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
             // Including the ReactiveFormsModule in our application
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* ReactiveFormsModule */],
         ],
         providers: [__WEBPACK_IMPORTED_MODULE_7__service_validate_service__["a" /* ValidateService */], __WEBPACK_IMPORTED_MODULE_6__service_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_5__service_hut_service__["a" /* HutService */], __WEBPACK_IMPORTED_MODULE_8__guards_auth_guard__["a" /* AuthGuard */]],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_11__app_component__["a" /* AppComponent */]]
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_12__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
 
@@ -326,7 +332,7 @@ var AddhutComponent = (function () {
 AddhutComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
         selector: 'app-addhut',
-        template: __webpack_require__(207),
+        template: __webpack_require__(208),
         styles: [__webpack_require__(195)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__["FlashMessagesService"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__service_hut_service__["a" /* HutService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_hut_service__["a" /* HutService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* Router */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__service_validate_service__["a" /* ValidateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__service_validate_service__["a" /* ValidateService */]) === "function" && _d || Object])
@@ -372,7 +378,7 @@ var AlluserComponent = (function () {
 AlluserComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-alluser',
-        template: __webpack_require__(208),
+        template: __webpack_require__(209),
         styles: [__webpack_require__(196)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__service_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__service_auth_service__["a" /* AuthService */]) === "function" && _a || Object])
@@ -409,7 +415,7 @@ var DashboardComponent = (function () {
 DashboardComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-dashboard',
-        template: __webpack_require__(209),
+        template: __webpack_require__(210),
         styles: [__webpack_require__(197)]
     }),
     __metadata("design:paramtypes", [])
@@ -444,7 +450,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var HomeComponent = (function () {
     function HomeComponent(_flashMessagesService, hutService, route) {
-        // ya code theik hai 
         var _this = this;
         this._flashMessagesService = _flashMessagesService;
         this.hutService = hutService;
@@ -458,13 +463,11 @@ var HomeComponent = (function () {
             if (data) {
                 console.log('all huts', data);
                 _this.Huts = data;
-                // console.log('ya object ma arhar hai',  this.Huts )
             }
             else {
                 _this._flashMessagesService.show(data.msg, { cssClass: 'alert-danger', timeout: 3000 });
             }
         });
-        // ya code theik hai 
     }
     HomeComponent.prototype.clickedMarker = function (mapMarker) {
         // console.log(mapMarker)
@@ -495,7 +498,7 @@ var HomeComponent = (function () {
 HomeComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-home',
-        template: __webpack_require__(210),
+        template: __webpack_require__(211),
         styles: [__webpack_require__(198)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__["FlashMessagesService"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__service_hut_service__["a" /* HutService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_hut_service__["a" /* HutService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */]) === "function" && _c || Object])
@@ -557,7 +560,7 @@ var HutUpdateComponent = (function () {
 HutUpdateComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-hut-update',
-        template: __webpack_require__(211),
+        template: __webpack_require__(212),
         styles: [__webpack_require__(199)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__service_hut_service__["a" /* HutService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__service_hut_service__["a" /* HutService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* ActivatedRoute */]) === "function" && _b || Object])
@@ -575,7 +578,7 @@ var _a, _b;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__service_hut_service__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_filter__ = __webpack_require__(224);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_filter__ = __webpack_require__(225);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_filter__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HutdetailComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -615,7 +618,7 @@ var HutdetailComponent = (function () {
 HutdetailComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-hutdetail',
-        template: __webpack_require__(212),
+        template: __webpack_require__(213),
         styles: [__webpack_require__(200)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__service_hut_service__["a" /* HutService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_hut_service__["a" /* HutService */]) === "function" && _b || Object])
@@ -697,7 +700,7 @@ var MyhutsComponent = (function () {
 MyhutsComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-myhuts',
-        template: __webpack_require__(213),
+        template: __webpack_require__(214),
         styles: [__webpack_require__(201)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__["FlashMessagesService"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__service_hut_service__["a" /* HutService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_hut_service__["a" /* HutService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */]) === "function" && _c || Object])
@@ -750,7 +753,7 @@ var NavComponent = (function () {
 NavComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-nav',
-        template: __webpack_require__(214),
+        template: __webpack_require__(215),
         styles: [__webpack_require__(202)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__service_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__service_auth_service__["a" /* AuthService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */]) === "function" && _c || Object])
@@ -798,7 +801,7 @@ var ProfileComponent = (function () {
 ProfileComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-profile',
-        template: __webpack_require__(215),
+        template: __webpack_require__(216),
         styles: [__webpack_require__(203)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__service_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__service_auth_service__["a" /* AuthService */]) === "function" && _a || Object])
@@ -872,7 +875,7 @@ var SignInComponent = (function () {
 SignInComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-sign-in',
-        template: __webpack_require__(216),
+        template: __webpack_require__(217),
         styles: [__webpack_require__(204)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__service_validate_service__["a" /* ValidateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__service_validate_service__["a" /* ValidateService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__service_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__service_auth_service__["a" /* AuthService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */]) === "function" && _d || Object])
@@ -952,7 +955,7 @@ var SignUpComponent = (function () {
 SignUpComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-sign-up',
-        template: __webpack_require__(217),
+        template: __webpack_require__(218),
         styles: [__webpack_require__(205)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__service_validate_service__["a" /* ValidateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__service_validate_service__["a" /* ValidateService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__["FlashMessagesService"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__service_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__service_auth_service__["a" /* AuthService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _d || Object])
@@ -1181,7 +1184,7 @@ exports = module.exports = __webpack_require__(5)(false);
 
 
 // module
-exports.push([module.i, ".shape{    \n\tborder-style: solid; border-width: 0 70px 40px 0; float:right; height: 0px; width: 0px; /* IE 9 */  /* Opera 10.5 */\n\t-webkit-transform:rotate(360deg); /* Safari and Chrome */\n\ttransform:rotate(360deg);\n}\n\n.shape-text{\n    color:#fff; font-size:12px; font-weight:bold; position:relative; right:-40px; top:2px; white-space: nowrap; /* IE 9 */  /* Opera 10.5 */\n\t-webkit-transform:rotate(30deg); /* Safari and Chrome */\n\ttransform:rotate(30deg);\n}\n\n.project {\n    min-height:300px;\n    height:auto;\n}\n\n.project{\n    background:#fff; border:1px solid #ddd; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); margin: 15px 0; overflow:hidden;\n}\n\n.project-radius{\n    border-radius:7px;\n}\n\n.project-default {    border-color: #999999; }\n.project-default .shape{\n\tborder-color: transparent #999999 transparent transparent;\n\tborder-color: rgba(255,255,255,0) #999999 rgba(255,255,255,0) rgba(255,255,255,0);\n}\n\n.project-danger {    border-color: #d9534f; }\n.project-danger .shape{\n\tborder-color: transparent #d9534f transparent transparent;\n\tborder-color: rgba(255,255,255,0) #d9534f rgba(255,255,255,0) rgba(255,255,255,0);\n}\n\n.project-success {\tborder-color: #5cb85c; }\n.project-success .shape{\n\tborder-color: transparent #5cb85c transparent transparent;\n\tborder-color: rgba(255,255,255,0) #5cb85c rgba(255,255,255,0) rgba(255,255,255,0);\n}\n\n.project-primary {\tborder-color: #428bca; }\n.project-primary .shape{\n\tborder-color: transparent #428bca transparent transparent;\n\tborder-color: rgba(255,255,255,0) #428bca rgba(255,255,255,0) rgba(255,255,255,0);\n}\n\n.project-info {\tborder-color: #5bc0de; }\n.project-info .shape{\n\tborder-color: transparent #5bc0de transparent transparent;\n\tborder-color: rgba(255,255,255,0) #5bc0de rgba(255,255,255,0) rgba(255,255,255,0);\n}\n\n.project-warning {\tborder-color: #f0ad4e; }\n.project-warning .shape{\n\tborder-color: transparent #f0ad4e transparent transparent;\n\tborder-color: rgba(255,255,255,0) #f0ad4e rgba(255,255,255,0) rgba(255,255,255,0);\n}\n\n.project-content {\n    padding:0 20px 10px;\n}\n.home-panel{\n    float: left;\n       margin-left: 80px;\n\n}\n.bot-right{\n\tfloat: right;\n\t    margin-right: 10px;\n\n}\n.map-style{\n\n    margin-left: 93px;\n\n\n}", ""]);
+exports.push([module.i, ".shape{    \n\tborder-style: solid; border-width: 0 70px 40px 0; float:right; height: 0px; width: 0px; /* IE 9 */  /* Opera 10.5 */\n\t-webkit-transform:rotate(360deg); /* Safari and Chrome */\n\ttransform:rotate(360deg);\n}\n\n.shape-text{\n    color:#fff; font-size:12px; font-weight:bold; position:relative; right:-40px; top:2px; white-space: nowrap; /* IE 9 */  /* Opera 10.5 */\n\t-webkit-transform:rotate(30deg); /* Safari and Chrome */\n\ttransform:rotate(30deg);\n}\n\n.project {\n    min-height:300px;\n    height:auto;\n}\n\n.project{\n    background:#fff; border:1px solid #ddd; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); margin: 15px 0; overflow:hidden;\n}\n\n.project-radius{\n    border-radius:7px;\n}\n\n.project-default {    border-color: #999999; }\n.project-default .shape{\n\tborder-color: transparent #999999 transparent transparent;\n\tborder-color: rgba(255,255,255,0) #999999 rgba(255,255,255,0) rgba(255,255,255,0);\n}\n\n.project-danger {    border-color: #d9534f; }\n.project-danger .shape{\n\tborder-color: transparent #d9534f transparent transparent;\n\tborder-color: rgba(255,255,255,0) #d9534f rgba(255,255,255,0) rgba(255,255,255,0);\n}\n\n.project-success {\tborder-color: #5cb85c; }\n.project-success .shape{\n\tborder-color: transparent #5cb85c transparent transparent;\n\tborder-color: rgba(255,255,255,0) #5cb85c rgba(255,255,255,0) rgba(255,255,255,0);\n}\n\n.project-primary {\tborder-color: #428bca; }\n.project-primary .shape{\n\tborder-color: transparent #428bca transparent transparent;\n\tborder-color: rgba(255,255,255,0) #428bca rgba(255,255,255,0) rgba(255,255,255,0);\n}\n\n.project-info {\tborder-color: #5bc0de; }\n.project-info .shape{\n\tborder-color: transparent #5bc0de transparent transparent;\n\tborder-color: rgba(255,255,255,0) #5bc0de rgba(255,255,255,0) rgba(255,255,255,0);\n}\n\n.project-warning {\tborder-color: #f0ad4e; }\n.project-warning .shape{\n\tborder-color: transparent #f0ad4e transparent transparent;\n\tborder-color: rgba(255,255,255,0) #f0ad4e rgba(255,255,255,0) rgba(255,255,255,0);\n}\n\n.project-content {\n    padding:0 20px 10px;\n}\n.home-panel{\n    float: left;\n       margin-left: 80px;\n\n}\n.bot-right{\n\tfloat: right;\n\t    margin-right: 10px;\n\n}\n.map-style{\n\n    margin-left: 93px;\n\n\n}\n.hutadds{\n\theight: 500px;\n\twidth: 100%;\n\t    margin-top: 300px;\n\n}", ""]);
 
 // exports
 
@@ -1381,7 +1384,7 @@ exports = module.exports = __webpack_require__(5)(false);
 
 
 // module
-exports.push([module.i, ".shape{    \n\tborder-style: solid; border-width: 0 70px 40px 0; float:right; height: 0px; width: 0px; /* IE 9 */  /* Opera 10.5 */\n\t-webkit-transform:rotate(360deg); /* Safari and Chrome */\n\ttransform:rotate(360deg);\n}\n\n.shape-text{\n    color:#fff; font-size:12px; font-weight:bold; position:relative; right:-40px; top:2px; white-space: nowrap; /* IE 9 */  /* Opera 10.5 */\n\t-webkit-transform:rotate(30deg); /* Safari and Chrome */\n\ttransform:rotate(30deg);\n}\n\n.project {\n    min-height:300px;\n    height:auto;\n}\n\n.project{\n    background:#fff; border:1px solid #ddd; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); margin: 15px 0; overflow:hidden;\n}\n\n.project-radius{\n    border-radius:7px;\n}\n\n.project-default {    border-color: #999999; }\n.project-default .shape{\n\tborder-color: transparent #999999 transparent transparent;\n\tborder-color: rgba(255,255,255,0) #999999 rgba(255,255,255,0) rgba(255,255,255,0);\n}\n\n.project-danger {    border-color: #d9534f; }\n.project-danger .shape{\n\tborder-color: transparent #d9534f transparent transparent;\n\tborder-color: rgba(255,255,255,0) #d9534f rgba(255,255,255,0) rgba(255,255,255,0);\n}\n\n.project-success {\tborder-color: #5cb85c; }\n.project-success .shape{\n\tborder-color: transparent #5cb85c transparent transparent;\n\tborder-color: rgba(255,255,255,0) #5cb85c rgba(255,255,255,0) rgba(255,255,255,0);\n}\n\n.project-primary {\tborder-color: #428bca; }\n.project-primary .shape{\n\tborder-color: transparent #428bca transparent transparent;\n\tborder-color: rgba(255,255,255,0) #428bca rgba(255,255,255,0) rgba(255,255,255,0);\n}\n\n.project-info {\tborder-color: #5bc0de; }\n.project-info .shape{\n\tborder-color: transparent #5bc0de transparent transparent;\n\tborder-color: rgba(255,255,255,0) #5bc0de rgba(255,255,255,0) rgba(255,255,255,0);\n}\n\n.project-warning {\tborder-color: #f0ad4e; }\n.project-warning .shape{\n\tborder-color: transparent #f0ad4e transparent transparent;\n\tborder-color: rgba(255,255,255,0) #f0ad4e rgba(255,255,255,0) rgba(255,255,255,0);\n}\n\n.project-content {\n    padding:0 20px 10px;\n}\n.home-panel{\n    float: left;\n       margin-left: 209px;\n\n}\n.bot-right{\n\tfloat: right;\n\t    margin-right: 10px;\n\n}\n.float-right{\n\tfloat: right;\n  margin-right: 10px;\n}.float-left{\n\t    float: left;\n  margin-left: 10px;\n}", ""]);
+exports.push([module.i, "/*.shape{    \n\tborder-style: solid; border-width: 0 70px 40px 0; float:right; height: 0px; width: 0px;\n\t-ms-transform:rotate(360deg); \n\t-o-transform: rotate(360deg); \n\t-webkit-transform:rotate(360deg); \n\ttransform:rotate(360deg);\n*/\n\n.shape-text{\n    color:#fff; font-size:12px; font-weight:bold; position:relative; right:-40px; top:2px; white-space: nowrap; /* IE 9 */  /* Opera 10.5 */\n\t-webkit-transform:rotate(30deg); /* Safari and Chrome */\n\ttransform:rotate(30deg);\n}\n\n.project {\n    min-height:300px;\n    height:auto;\n}\n\n.project{\n    background:#fff; border:1px solid #ddd; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); margin: 15px 0; overflow:hidden;\n}\n\n.project-radius{\n    border-radius:7px;\n}\n\n.project-default {    border-color: #999999; }\n.project-default .shape{\n\tborder-color: transparent #999999 transparent transparent;\n\tborder-color: rgba(255,255,255,0) #999999 rgba(255,255,255,0) rgba(255,255,255,0);\n}\n\n.project-danger {    border-color: #d9534f; }\n.project-danger .shape{\n\tborder-color: transparent #d9534f transparent transparent;\n\tborder-color: rgba(255,255,255,0) #d9534f rgba(255,255,255,0) rgba(255,255,255,0);\n}\n\n.project-success {\tborder-color: #5cb85c; }\n.project-success .shape{\n\tborder-color: transparent #5cb85c transparent transparent;\n\tborder-color: rgba(255,255,255,0) #5cb85c rgba(255,255,255,0) rgba(255,255,255,0);\n}\n\n.project-primary {\tborder-color: #428bca; }\n.project-primary .shape{\n\tborder-color: transparent #428bca transparent transparent;\n\tborder-color: rgba(255,255,255,0) #428bca rgba(255,255,255,0) rgba(255,255,255,0);\n}\n\n.project-info {\tborder-color: #5bc0de; }\n.project-info .shape{\n\tborder-color: transparent #5bc0de transparent transparent;\n\tborder-color: rgba(255,255,255,0) #5bc0de rgba(255,255,255,0) rgba(255,255,255,0);\n}\n\n.project-warning {\tborder-color: #f0ad4e; }\n.project-warning .shape{\n\tborder-color: transparent #f0ad4e transparent transparent;\n\tborder-color: rgba(255,255,255,0) #f0ad4e rgba(255,255,255,0) rgba(255,255,255,0);\n}\n\n.project-content {\n    padding:0 20px 10px;\n}\n.home-panel{\n    float: left;\n       margin-left: 209px;\n\n}\n.bot-right{\n\tfloat: right;\n\t    margin-right: 10px;\n\n}\n.float-right{\n\tfloat: right;\n  margin-right: 10px;\n}.float-left{\n\t    float: left;\n  margin-left: 10px;\n}", ""]);
 
 // exports
 
@@ -1463,91 +1466,91 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 206:
+/***/ 207:
 /***/ (function(module, exports) {
 
 module.exports = "\n<!--<button (click)=\"toggleMenu()\" class=\"hamburger\">\n  <span>toggle menu</span>\n</button>-->\n <!--<app-nav [@slideInOut]=\"menuState\"></app-nav>-->\n <app-nav ></app-nav>\n<div class=\"container\">\n\n          <flash-messages></flash-messages>\n\n  <router-outlet></router-outlet>\n</div>"
 
 /***/ }),
 
-/***/ 207:
+/***/ 208:
 /***/ (function(module, exports) {
 
 module.exports = "\t<section id=\"contact\">\n            <div class=\"container\">\n                <div class=\"row\">\n                    <div class=\"col-md-8\">\n                        <form (submit)=\"addHut()\">\n                            <div class=\"row\">\n                               <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <input type=\"text\" class=\"form-control\" placeholder=\"Your Name *\"   [(ngModel)]=\"name\" \n                                                                                                          name=\"name\"  required=\"\" data-validation-required-message=\"Please enter your name.\">\n                                        <p class=\"help-block text-danger\"></p>\n                                    </div>\n                                    <div class=\"form-group\">\n                                        <input type=\"email\" class=\"form-control\" placeholder=\"Your unit *\" [(ngModel)]=\"unit\" name=\"unit\"  required=\"\" data-validation-required-message=\"Please enter your email address.\">\n                                        <p class=\"help-block text-danger\"></p>\n                                    </div>\n                                    <div class=\"form-group\">\n                                        <input type=\"tel\" class=\"form-control\" placeholder=\"Your rooms *\" [(ngModel)]=\"rooms\" name=\"rooms\"  required=\"\" data-validation-required-message=\"Please enter your phone number.\">\n                                        <p class=\"help-block text-danger\"></p>\n                                    </div>\n                                </div>\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <input class=\"form-control\" placeholder=\"Your maxPersonAllowed *\" [(ngModel)]=\"maxPersonAllowed\" name=\"maxPersonAllowed\" required=\"\" data-validation-required-message=\"Please enter a message.\">\n                                        <p class=\"help-block text-danger\"></p>\n                                    </div>\n                                </div>\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <input class=\"form-control\" placeholder=\"Your address *\" [(ngModel)]=\"address\" name=\"address\" required=\"\" data-validation-required-message=\"Please enter a message.\">\n                                        <p class=\"help-block text-danger\"></p>\n                                    </div>\n                                </div>\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <input class=\"form-control\" placeholder=\"Your location *\" [(ngModel)]=\"location\" name=\"location\" required=\"\" data-validation-required-message=\"Please enter a message.\">\n                                        <p class=\"help-block text-danger\"></p>\n                                    </div>\n                                </div>\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <input class=\"form-control\" placeholder=\"Your rent *\" [(ngModel)]=\"rent\" name=\"rent\" required=\"\" data-validation-required-message=\"Please enter a message.\">\n                                    </div>\n                                </div>\n\n                                <div class=\"col-md-6\">\n                                    <div class=\"form-group\">\n                                        <input class=\"form-control\" placeholder=\"Your description *\" [(ngModel)]=\"description\" name=\"description\" required=\"\" data-validation-required-message=\"Please enter a message.\">\n                                        <p class=\"help-block text-danger\"></p>\n                                    </div>\n                                </div>\n        <!--<div class=\"form-group\">\n\t\t\t<label><span>Choose Image</span><input type=\"file\" id=\"myFile\" name=\"imgPath\" (change)=\"onChange($event)\"></label>\n\t\t</div>\t-->\n                                <div class=\"clearfix\"></div>\n                                <div class=\"col-lg-12 text-center\">\n                                    <div id=\"success\"></div>\n                                    <button type=\"submit\" value=\"submit\" class=\"btn btn-xl get\">submit</button>\n                                </div>\n                            </div>\n                        </form>\n                    </div>\n                    <div class=\"col-md-4\">\n                      \n                          <div class=\"form-group\">\n\t\t<sebm-google-map \n[latitude]=\"lat\" \n[longitude]=\"lng\"\n[zoom]=\"zoom\"\n[disableDefaultUI]=\"false\"\n[zoomControl]=\"true\"\n(mapClick)=\"mapClicked($event)\">\n\n  <sebm-google-map-marker\n  *ngIf = \"mapMarker\"\n  (markerClick)=\"clickedMarker(mapMarker)\" \n  [latitude]=\"mapMarker.lat\" \n  [longitude]=\"mapMarker.lng\"\n  [markerDraggable]=\"mapMarker.draggable\"\n  (dragEnd)=\"markerDragEnd(mapMarker, $event)\">\n\n  <sebm-google-map-info-window>\n    <strong>{{name}}</strong>\n  </sebm-google-map-info-window>\n  \n  </sebm-google-map-marker>\n</sebm-google-map>\n\t</div>\t\n                    </div>\n                </div>\n            </div>\n        </section>"
 
 /***/ }),
 
-/***/ 208:
+/***/ 209:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"container panel-user\" *ngFor=\"let user of user; let i=index\">\n\t<div class=\"row\">\n\t\t<div class=\"col-lg-3 col-sm-6\">\n\n            <div class=\"card hovercard\">\n                <div class=\"cardheader\">\n\n                </div>\n                <div class=\"avatar\">\n                    <img alt=\"\" src=\"http://lorempixel.com/100/100/people/9/\">\n                </div>\n                <div class=\"info\">\n                    <div class=\"title\">\n                        <a target=\"_blank\" href=\"http://scripteden.com/\">Script Eden</a>\n                    </div>\n                    <div class=\"desc\">{{user.name}}</div>\n                    <div class=\"desc\">{{user.username}}</div>\n                    <div class=\"desc\">{{user.email}}</div>\n                </div>\n                <div class=\"bottom\">\n                    <a class=\"btn btn-primary btn-twitter btn-sm\" href=\"https://twitter.com/webmaniac\">\n                        <i class=\"fa fa-twitter\"></i>\n                    </a>\n                    <a class=\"btn btn-danger btn-sm\" rel=\"publisher\"\n                       href=\"https://plus.google.com/+ahmshahnuralam\">\n                        <i class=\"fa fa-google-plus\"></i>\n                    </a>\n                    <a class=\"btn btn-primary btn-sm\" rel=\"publisher\"\n                       href=\"https://plus.google.com/shahnuralam\">\n                        <i class=\"fa fa-facebook\"></i>\n                    </a>\n                    <a class=\"btn btn-warning btn-sm\" rel=\"publisher\" href=\"https://plus.google.com/shahnuralam\">\n                        <i class=\"fa fa-behance\"></i>\n                    </a>\n                </div>\n            </div>\n\n        </div>\n\n\t</div>\n</div>"
 
 /***/ }),
 
-/***/ 209:
+/***/ 210:
 /***/ (function(module, exports) {
 
 module.exports = "<p>\n  dashboard works!\n</p>\n"
 
 /***/ }),
 
-/***/ 210:
-/***/ (function(module, exports) {
-
-module.exports = "\t<!--map-->\n<div align=\"center\" class=\"container col-sm-12 map-style \">\n\t\t<sebm-google-map \n[latitude]=\"lat\" \n[longitude]=\"lng\"\n[zoom]=\"zoom\"\n[disableDefaultUI]=\"false\"\n[zoomControl]=\"true\"\n>\n\n  <sebm-google-map-marker \n  *ngFor=\"let Huts of Huts; let i=index\"\n  (markerClick)=\"clickedMarker(mapMarker)\" \n  [latitude]=\"Huts.latitude\" \n  [longitude]=\"Huts.longitude\"\n  [markerDraggable]=\"false\">\n\n  <sebm-google-map-info-window>\n    <h1>Beach huts</h1>\n    <label>Name:</label>  {{Huts.name}} <br>\n    <label>Unit:</label>  {{Huts.unit}} <br>\n    <label>Rooms:</label>  {{Huts.rooms}} <br>\n    <label>Desciption:</label>  {{Huts.description}} <br>\n    <label>Rent:</label>  {{Huts.rent}} <br>\n\n    <form>\n    <button class=\"btn btn-primary btn-sm\" (click)=\"flag = true\">Write a review</button> <br><br>\n      <div *ngIf=\"flag === true\" class=\"col-lg-10 form-group\">\n        <textarea class=\"form-control\" rows=\"3\" id=\"textArea\"></textarea>\n      </div>\n\n    </form>\n  </sebm-google-map-info-window>\n  \n  </sebm-google-map-marker>\n</sebm-google-map>\n\t</div>\n\t<div class=\"container home-panel\">\n      <div class=\"row\">\n        \n        <div class=\"col-xs-3\" *ngFor=\"let Huts of Huts; let i=index\">\n\t\t\t<div class=\"project project-default\">\n\t\t\t\t<div class=\"shape\">\n\t\t\t\t\t<div class=\"shape-text\">\n\t\t\t\t\t\ttop\t\t\t\t\t\t\t\t\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"project-content\">\n\t\t\t\t\t<h3 class=\"lead\">\n\t\t\t\t\t   <img src=\"http://placehold.it/300x200/000000/&text=Header\" height=\"100\" width=\"100\" alt=\"\"/>\n\n\t\t\t\t\t</h3>\n\t\t\t\t\t      <div class=\"desc\"><p>name:{{Huts.name}}</p></div>\n      <div class=\"desc\"><p>location:{{Huts.location}}</p></div>\n       <div class=\"desc\"><p>rent:{{Huts.rent}}</p></div>\n\n\t\t\n\t\t\t\t</div>\n          <div class=\"bottom bot-right\">\n<a class=\"btn btn-default\"(click)=\"hutdetail(Huts, i)\">read more</a>\n   </div>\n\t\t\t</div>\n       \n\t\t</div>\n      </div>\n</div>\n"
-
-/***/ }),
-
 /***/ 211:
 /***/ (function(module, exports) {
 
-module.exports = "\n<hr><hr>\n\n        <h2 class=\"page-header\">Register1</h2>\n<form (submit)=\"updhut()\"\n>\n  <div class=\"form-group\" >\n    <label>Name</label>\n    <input type=\"text\"\n    [ngModel]=\"this.name\"\n    name=\"name\" \n  class=\"form-control\"/>\n  </div>\n\n\n    <div class=\"form-group\">\n    <label>rooms</label>\n    <input type=\"text\" [(ngModel)]=\"rooms\"    name=\"rooms\" class=\"form-control\">\n  </div>\n    <div class=\"form-group\">\n    <label>maxPersonAllowed</label>\n    <input type=\"text\" [(ngModel)]=\"maxPersonAllowed\" name=\"maxPersonAllowed\" class=\"form-control\">\n  </div>\n  \n   \n    <div class=\"form-group\">\n    <label>rent</label>\n    <input type=\"text\" [(ngModel)]=\"rent\" name=\"rent\"  class=\"form-control\">\n  </div>\n    <div class=\"form-group\">\n    <label>description</label>\n    <input type=\"text\" [(ngModel)]=\"description\" name=\"description\"  class=\"form-control\">\n  </div>\n  \t<!--<div class=\"form-group\">\n\t\t\t<label><span>Choose Image</span><input type=\"file\" id=\"myFile\" (change)=\"onChange($event)\"></label>\n\t\t</div>-->\n  \n  <input type=\"submit\" value=\"submit\" class=\"btn btn-primary\">\n</form>"
+module.exports = "\t<!--map-->\n<div align=\"center\" class=\"container col-sm-12 map-style \">\n\t\t<sebm-google-map \n[latitude]=\"lat\" \n[longitude]=\"lng\"\n[zoom]=\"zoom\"\n[disableDefaultUI]=\"false\"\n[zoomControl]=\"true\"\n>\n\n  <sebm-google-map-marker \n  *ngFor=\"let Huts of Huts; let i=index\"\n  (markerClick)=\"clickedMarker(mapMarker)\" \n  [latitude]=\"Huts.latitude\" \n  [longitude]=\"Huts.longitude\"\n  [markerDraggable]=\"false\">\n\n  <sebm-google-map-info-window>\n    <h1>Beach huts</h1>\n    <label>Name:</label>  {{Huts.name}} <br>\n    <label>Unit:</label>  {{Huts.unit}} <br>\n    <label>Rooms:</label>  {{Huts.rooms}} <br>\n    <label>Desciption:</label>  {{Huts.description}} <br>\n    <label>Rent:</label>  {{Huts.rent}} <br>\n\n    <form>\n    <button class=\"btn btn-primary btn-sm\" (click)=\"flag = true\">Write a review</button> <br><br>\n      <div *ngIf=\"flag === true\" class=\"col-lg-10 form-group\">\n        <textarea class=\"form-control\" rows=\"3\" id=\"textArea\"></textarea>\n      </div>\n\n    </form>\n  </sebm-google-map-info-window>\n  \n  </sebm-google-map-marker>\n</sebm-google-map>\n\t</div>\n  <div class=\"hutadds\">\n<ng2-adsense\n  [adClient]=\"ca-pub-1895109071827119\"\n  [adSlot]=\"6278796456\"\n  [display]=\"'inline-block'\"\n  [width]=\"320\"\n  [height]=\"108\">\n</ng2-adsense>\n\n  </div>\n  \n\t<div class=\"container home-panel\">\n      <div class=\"row\">\n        \n        <div class=\"col-xs-3\" *ngFor=\"let Huts of Huts; let i=index\">\n\t\t\t<div class=\"project project-default\">\n\t\t\t\t<div class=\"shape\">\n\t\t\t\t\t<div class=\"shape-text\">\n\t\t\t\t\t\ttop\t\t\t\t\t\t\t\t\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"project-content\">\n\t\t\t\t\t<h3 class=\"lead\">\n\t\t\t\t\t   <img src=\"http://placehold.it/300x200/000000/&text=Header\" height=\"100\" width=\"100\" alt=\"\"/>\n\n\t\t\t\t\t</h3>\n\t\t\t\t\t      <div class=\"desc\"><p>name:{{Huts.name}}</p></div>\n      <div class=\"desc\"><p>location:{{Huts.location}}</p></div>\n       <div class=\"desc\"><p>rent:{{Huts.rent}}</p></div>\n\n\t\t\n\t\t\t\t</div>\n          <div class=\"bottom bot-right\">\n<a class=\"btn btn-default\"(click)=\"hutdetail(Huts, i)\">read more</a>\n   </div>\n\t\t\t</div>\n       \n\t\t</div>\n      </div>\n</div>\n"
 
 /***/ }),
 
 /***/ 212:
 /***/ (function(module, exports) {
 
-module.exports = "\t<div class=\"container home-panel\">\n      <div class=\"row\">\n        \n        <div class=\"col-xs-3\">\n\t\t\t<div class=\"project project-default\">\n\t\t\t\t<div class=\"shape\">\n\t\t\t\t\t<div class=\"shape-text\">\n\t\t\t\t\t\ttop\t\t\t\t\t\t\t\t\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"project-content\">\n\t\t\t\t\t<h3 class=\"lead\">\n\t\t\t\t\t   <img src=\"http://placehold.it/300x200/000000/&text=Header\" height=\"100\" width=\"100\" alt=\"\"/>\n\n\t\t\t\t\t</h3>\n\t\t\t\t\t      <div class=\"desc\"><p>name:{{hutObj.name}}</p></div>\n      <div class=\"desc\"><p>description:{{hutObj.description}}</p></div>\n       <div class=\"desc\"><p>rent:{{hutObj.rent}}</p></div>\n\t<h4 class=\"price\">current address: <span>:{{hutObj.address}}</span></h4>\n\t\t\t\t\t\t<h5 class=\"sizes\">Rooms:\n\t\t\t\t\t\t\t<span class=\"size\" data-toggle=\"tooltip\" title=\"small\">{{hutObj.rooms}}</span>\n\t\t\t\t\t\t\t<!--<span class=\"size\" data-toggle=\"tooltip\" title=\"medium\">m</span>\n\t\t\t\t\t\t\t<span class=\"size\" data-toggle=\"tooltip\" title=\"large\">l</span>\n\t\t\t\t\t\t\t<span class=\"size\" data-toggle=\"tooltip\" title=\"xtra large\">xl</span>-->\n\t\t\t\t\t\t</h5>\n\t\t\t\t\t\t<h5 class=\"colors\">Rent: \n\t\t\t\t\t\t\t<span class=\"color orange\" >{{hutObj.rent}}</span>\n\t\t\t\t\t\t\t<!--<span class=\"color green\"></span>\n\t\t\t\t\t\t\t<span class=\"color blue\"></span>-->\n\t\t\t\t\t\t</h5>\n\t\t\t\t</div>\n          <div class=\"bottom bot-right\">\n   </div>\n\t\t\t</div>\n       \n\t\t</div>\n      </div>\n</div>\n\n  "
+module.exports = "\n<hr><hr>\n\n        <h2 class=\"page-header\">Register1</h2>\n<form (submit)=\"updhut()\"\n>\n  <div class=\"form-group\" >\n    <label>Name</label>\n    <input type=\"text\"\n    [ngModel]=\"this.name\"\n    name=\"name\" \n  class=\"form-control\"/>\n  </div>\n\n\n    <div class=\"form-group\">\n    <label>rooms</label>\n    <input type=\"text\" [(ngModel)]=\"rooms\"    name=\"rooms\" class=\"form-control\">\n  </div>\n    <div class=\"form-group\">\n    <label>maxPersonAllowed</label>\n    <input type=\"text\" [(ngModel)]=\"maxPersonAllowed\" name=\"maxPersonAllowed\" class=\"form-control\">\n  </div>\n  \n   \n    <div class=\"form-group\">\n    <label>rent</label>\n    <input type=\"text\" [(ngModel)]=\"rent\" name=\"rent\"  class=\"form-control\">\n  </div>\n    <div class=\"form-group\">\n    <label>description</label>\n    <input type=\"text\" [(ngModel)]=\"description\" name=\"description\"  class=\"form-control\">\n  </div>\n  \t<!--<div class=\"form-group\">\n\t\t\t<label><span>Choose Image</span><input type=\"file\" id=\"myFile\" (change)=\"onChange($event)\"></label>\n\t\t</div>-->\n  \n  <input type=\"submit\" value=\"submit\" class=\"btn btn-primary\">\n</form>"
 
 /***/ }),
 
 /***/ 213:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container home-panel\">\n      <div class=\"row\">\n        \n        <div class=\"col-xs-3\" *ngFor=\"let Huts of Huts; let i=index\">\n\t\t\t<div class=\"project project-default\">\n\t\t\t\t<div class=\"shape\">\n\t\t\t\t\t<div class=\"shape-text\">\n\t\t\t\t\t\ttop\t\t\t\t\t\t\t\t\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"project-content\">\n\t\t\t\t\t<h3 class=\"lead\">\n\t\t\t\t\t   <img src=\"http://placehold.it/300x200/000000/&text=Header\" height=\"100\" width=\"100\" alt=\"\"/>\n\n\t\t\t\t\t</h3>\n\t\t\t\t\t      <div class=\"desc\"><p>name:{{Huts.name}}</p></div>\n      <div class=\"desc\"><p>location:{{Huts.location}}</p></div>\n       <div class=\"desc\"><p>rent:{{Huts.rent}}</p></div>\n\n\t\t\n\t\t\t\t</div>\n           <div class=\"bottom\">\n      <a class=\"btn btn-danger float-right\" (click)=\"delete(Huts, i)\">Delete</a>\n      <a class=\"btn btn-default float-left\" (click)=\"update(Huts, i)\">Edit</a>\n  </div>\n\t\t\t</div>\n       \n\t\t</div>\n      </div>\n</div>\n\n\n    \n\n\n\n<!--map-->\n <div class=\"container col-sm-12\">\n\t\t<sebm-google-map \n[latitude]=\"lat\" \n[longitude]=\"lng\"\n[zoom]=\"zoom\"\n[disableDefaultUI]=\"false\"\n[zoomControl]=\"true\"\n>\n\n  <sebm-google-map-marker \n  *ngFor=\"let Huts of Huts; let i=index\"\n  (markerClick)=\"clickedMarker(mapMarker)\" \n  [latitude]=\"Huts.latitude\" \n  [longitude]=\"Huts.longitude\"\n  [markerDraggable]=\"false\">\n\n  <sebm-google-map-info-window>\n    <h1>Beach huts</h1>\n    <label>Name:</label>  {{Huts.name}} <br>\n    <label>Unit:</label>  {{Huts.unit}} <br>\n    <label>Rooms:</label>  {{Huts.rooms}} <br>\n    <label>Desciption:</label>  {{Huts.description}} <br>\n    <label>Rent:</label>  {{Huts.rent}} <br>\n\n    <form>\n    <button class=\"btn btn-primary btn-sm\" (click)=\"flag = true\">Write a review</button> <br><br>\n      <div *ngIf=\"flag === true\" class=\"col-lg-10 form-group\">\n        <textarea class=\"form-control\" rows=\"3\" id=\"textArea\"></textarea>\n      </div>\n\n    </form>\n  </sebm-google-map-info-window>\n  \n  </sebm-google-map-marker>\n</sebm-google-map>\n\t</div>\n          \n\n"
+module.exports = "\t<div class=\"container home-panel\">\n      <div class=\"row\">\n        \n        <div class=\"col-xs-3\">\n\t\t\t<div class=\"project project-default\">\n\t\t\t\t<div class=\"shape\">\n\t\t\t\t\t<div class=\"shape-text\">\n\t\t\t\t\t\ttop\t\t\t\t\t\t\t\t\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"project-content\">\n\t\t\t\t\t<h3 class=\"lead\">\n\t\t\t\t\t   <img src=\"http://placehold.it/300x200/000000/&text=Header\" height=\"100\" width=\"100\" alt=\"\"/>\n\n\t\t\t\t\t</h3>\n\t\t\t\t\t      <div class=\"desc\"><p>name:{{hutObj.name}}</p></div>\n      <div class=\"desc\"><p>description:{{hutObj.description}}</p></div>\n       <div class=\"desc\"><p>rent:{{hutObj.rent}}</p></div>\n\t<h4 class=\"price\">current address: <span>:{{hutObj.address}}</span></h4>\n\t\t\t\t\t\t<h5 class=\"sizes\">Rooms:\n\t\t\t\t\t\t\t<span class=\"size\" data-toggle=\"tooltip\" title=\"small\">{{hutObj.rooms}}</span>\n\t\t\t\t\t\t\t<!--<span class=\"size\" data-toggle=\"tooltip\" title=\"medium\">m</span>\n\t\t\t\t\t\t\t<span class=\"size\" data-toggle=\"tooltip\" title=\"large\">l</span>\n\t\t\t\t\t\t\t<span class=\"size\" data-toggle=\"tooltip\" title=\"xtra large\">xl</span>-->\n\t\t\t\t\t\t</h5>\n\t\t\t\t\t\t<h5 class=\"colors\">Rent: \n\t\t\t\t\t\t\t<span class=\"color orange\" >{{hutObj.rent}}</span>\n\t\t\t\t\t\t\t<!--<span class=\"color green\"></span>\n\t\t\t\t\t\t\t<span class=\"color blue\"></span>-->\n\t\t\t\t\t\t</h5>\n\t\t\t\t</div>\n          <div class=\"bottom bot-right\">\n   </div>\n\t\t\t</div>\n       \n\t\t</div>\n      </div>\n</div>\n\n  "
 
 /***/ }),
 
 /***/ 214:
 /***/ (function(module, exports) {
 
-module.exports = "  <!-- Fixed navbar -->\n    <nav class=\"navbar navbar-inverse \">\n        <div class=\"container\">\n            <div class=\"navbar-header\">\n                <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\n                    <span class=\"sr-only\">Toggle navigation</span>\n                    <span class=\"icon-bar\"></span>\n                    <span class=\"icon-bar\"></span>\n                    <span class=\"icon-bar\"></span>\n                </button>\n          <a class=\"navbar-brand\" href=\"#\">MEAN Auth App</a>\n            </div>\n            <div id=\"navbar\" class=\"collapse navbar-collapse js-navbar-collapse navbar-left\">\n                <ul class=\"nav navbar-nav\">\n            <li><a [routerLink]=\"['/']\">Home</a></li>\n                 \n\n              <li *ngIf=\"!authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact: true}\" ><a  [routerLink]=\"['SignIn']\">Login</a></li>\n              <li *ngIf=\"!authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact: true}\" ><a [routerLink]=\"['SignUp']\">Register</a></li>\n              <li [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact: true}\"><a  [routerLink]=\"['/alluser']\">alluser</a></li>\n                   <ul class=\"nav navbar-nav \">\n                    <li class=\"dropdown \">\n                        <a href=\"#\" class=\"dropdown-toggle navbar-right\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\"> <span class=\"caret \"></span></a>\n                        <ul class=\"dropdown-menu \">\n                            <li><a href=\"#\">Action</a></li>\n                                 <li *ngIf=\"authService.loggedIn()\"  [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact: true}\"><a  [routerLink]=\"['/dashboard']\">dashboard</a></li>\n\n              <li *ngIf=\"authService.loggedIn()\"  [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact: true}\"><a [routerLink]=\"['/profile']\">profile</a></li>\n                            <li  *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact: true}\"><a  [routerLink]=\"['/addhuts']\">addhut</a></li>                \n              <li *ngIf=\"authService.loggedIn()\"  [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact: true}\"><a [routerLink]=\"['/myhuts']\">myhuts</a></li>\n\n                            <li role=\"separator\" class=\"divider\"></li>\n                            <!--<li class=\"dropdown-header\">Nav header</li>-->\n                                   <li *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact: true}\" ><a  (click)=\"logout()\" href=\"#\">logout</a></li>\n\n                      </ul>\n                    </li>\n                   </ul>\n                </ul>\n            </div>\n            <!--/.nav-collapse -->\n        </div>\n    </nav>\n<!--\n<ul>\n  <li>Menu Item</li>\n  <li>Menu Item</li>\n  <li>Menu Item</li>\n  <li>Menu Item</li>\n  <li>Menu Item</li>\n  <li>Menu Item</li>\n</ul>-->\n\n<div id=\"sidebar\" *ngIf=\"authService.loggedIn()\" >\n    <div id=\"btn\" onclick=\"show(sidebar)\">\n        <span></span>\n        <span></span>\n        <span></span>\n    </div>\n<ul >\n           \n<li><a [routerLink]=\"['/']\">Home</a></li>\n<li *ngIf=\"authService.loggedIn()\"  [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact: true}\"><a [routerLink]=\"['/profile']\">profile</a></li>\n<li  *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact: true}\"><a  [routerLink]=\"['/addhuts']\">addhut</a></li>                \n<li *ngIf=\"authService.loggedIn()\"  [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact: true}\"><a [routerLink]=\"['/myhuts']\">myhuts</a></li>\n               \n</ul>\n</div>\n\n    <!-- <div id=\"sidebar-wrapper\" *ngIf=\"authService.loggedIn()\">\n            <ul class=\"sidebar-nav\">\n               \n              \n            <li><a [routerLink]=\"['/']\">Home</a></li>\n              \n<li *ngIf=\"authService.loggedIn()\"  [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact: true}\"><a [routerLink]=\"['/profile']\">profile</a></li>\n<li  *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact: true}\"><a  [routerLink]=\"['/addhuts']\">addhut</a></li>                \n\n              <li *ngIf=\"authService.loggedIn()\"  [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact: true}\"><a [routerLink]=\"['/myhuts']\">myhuts</a></li>\n               \n            </ul>\n        </div>-->\n        <!-- /#sidebar-wrapper -->"
+module.exports = "<div class=\"container home-panel\">\n      <div class=\"row\">\n        \n        <div class=\"col-xs-3\" *ngFor=\"let Huts of Huts; let i=index\">\n\t\t\t<div class=\"project project-default\">\n\t\t\t\t<div class=\"shape\">\n\t\t\t\t\t<div class=\"shape-text\">\n\t\t\t\t\t\ttop\t\t\t\t\t\t\t\t\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"project-content\">\n\t\t\t\t\t<h3 class=\"lead\">\n\t\t\t\t\t   <img src=\"http://placehold.it/300x200/000000/&text=Header\" height=\"100\" width=\"100\" alt=\"\"/>\n\n\t\t\t\t\t</h3>\n\t\t\t\t\t      <div class=\"desc\"><p>name:{{Huts.name}}</p></div>\n      <div class=\"desc\"><p>location:{{Huts.location}}</p></div>\n       <div class=\"desc\"><p>rent:{{Huts.rent}}</p></div>\n\n\t\t\n\t\t\t\t</div>\n           <div class=\"bottom\">\n      <a class=\"btn btn-danger float-right\" (click)=\"delete(Huts, i)\">Delete</a>\n      <a class=\"btn btn-default float-left\" (click)=\"update(Huts, i)\">Edit</a>\n  </div>\n\t\t\t</div>\n       \n\t\t</div>\n      </div>\n</div>\n\n\n    \n\n\n\n<!--map-->\n <div class=\"container col-sm-12\">\n\t\t<sebm-google-map \n[latitude]=\"lat\" \n[longitude]=\"lng\"\n[zoom]=\"zoom\"\n[disableDefaultUI]=\"false\"\n[zoomControl]=\"true\"\n>\n\n  <sebm-google-map-marker \n  *ngFor=\"let Huts of Huts; let i=index\"\n  (markerClick)=\"clickedMarker(mapMarker)\" \n  [latitude]=\"Huts.latitude\" \n  [longitude]=\"Huts.longitude\"\n  [markerDraggable]=\"false\">\n\n  <sebm-google-map-info-window>\n    <h1>Beach huts</h1>\n    <label>Name:</label>  {{Huts.name}} <br>\n    <label>Unit:</label>  {{Huts.unit}} <br>\n    <label>Rooms:</label>  {{Huts.rooms}} <br>\n    <label>Desciption:</label>  {{Huts.description}} <br>\n    <label>Rent:</label>  {{Huts.rent}} <br>\n\n    <form>\n    <button class=\"btn btn-primary btn-sm\" (click)=\"flag = true\">Write a review</button> <br><br>\n      <div *ngIf=\"flag === true\" class=\"col-lg-10 form-group\">\n        <textarea class=\"form-control\" rows=\"3\" id=\"textArea\"></textarea>\n      </div>\n\n    </form>\n  </sebm-google-map-info-window>\n  \n  </sebm-google-map-marker>\n</sebm-google-map>\n\t</div>\n          \n\n"
 
 /***/ }),
 
 /***/ 215:
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"container\" *ngIf=\"user\">\n\t<div class=\"row\">\n\t\t<div class=\"col-lg-3 col-sm-6\">\n\n            <div class=\"card hovercard\">\n                <div class=\"cardheader\">\n\n                </div>\n                <div class=\"avatar\">\n                    <img alt=\"\" src=\"http://lorempixel.com/100/100/people/9/\">\n                </div>\n                <div class=\"info\">\n                    <div class=\"title\">\n                        <a target=\"_blank\" href=\"http://scripteden.com/\">Script Eden</a>\n                    </div>\n                    <div class=\"desc\">{{user.name}}</div>\n                    <div class=\"desc\">{{user.username}}</div>\n                    <div class=\"desc\">{{user.email}}</div>\n                </div>\n                <div class=\"bottom\">\n                    <a class=\"btn btn-primary btn-twitter btn-sm\" href=\"https://twitter.com/webmaniac\">\n                        <i class=\"fa fa-twitter\"></i>\n                    </a>\n                    <a class=\"btn btn-danger btn-sm\" rel=\"publisher\"\n                       href=\"https://plus.google.com/+ahmshahnuralam\">\n                        <i class=\"fa fa-google-plus\"></i>\n                    </a>\n                    <a class=\"btn btn-primary btn-sm\" rel=\"publisher\"\n                       href=\"https://plus.google.com/shahnuralam\">\n                        <i class=\"fa fa-facebook\"></i>\n                    </a>\n                    <a class=\"btn btn-warning btn-sm\" rel=\"publisher\" href=\"https://plus.google.com/shahnuralam\">\n                        <i class=\"fa fa-behance\"></i>\n                    </a>\n                </div>\n            </div>\n\n        </div>\n\n\t</div>\n</div>"
+module.exports = "    <nav class=\"navbar navbar-inverse \">\n        <div class=\"container\">\n            <div class=\"navbar-header\">\n                <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\n                    <span class=\"sr-only\">Toggle navigation</span>\n                    <span class=\"icon-bar\"></span>\n                    <span class=\"icon-bar\"></span>\n                    <span class=\"icon-bar\"></span>\n                </button>\n          <a class=\"navbar-brand\" href=\"#\">MEAN Auth App</a>\n            </div>\n            <div id=\"navbar\" class=\"collapse navbar-collapse js-navbar-collapse navbar-left\">\n                <ul class=\"nav navbar-nav\">\n            <li><a [routerLink]=\"['/']\">Home</a></li>\n                 \n\n              <li *ngIf=\"!authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact: true}\" ><a  [routerLink]=\"['SignIn']\">Login</a></li>\n              <li *ngIf=\"!authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact: true}\" ><a [routerLink]=\"['SignUp']\">Register</a></li>\n              <li [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact: true}\"><a  [routerLink]=\"['/alluser']\">alluser</a></li>\n                   <ul class=\"nav navbar-nav \">\n                    <li class=\"dropdown \">\n                        <a href=\"#\" class=\"dropdown-toggle navbar-right\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\"> <span class=\"caret \"></span></a>\n                        <ul class=\"dropdown-menu \">\n                            <li><a href=\"#\">Action</a></li>\n                                 <li *ngIf=\"authService.loggedIn()\"  [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact: true}\"><a  [routerLink]=\"['/dashboard']\">dashboard</a></li>\n\n              <li *ngIf=\"authService.loggedIn()\"  [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact: true}\"><a [routerLink]=\"['/profile']\">profile</a></li>\n                            <li  *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact: true}\"><a  [routerLink]=\"['/addhuts']\">addhut</a></li>                \n              <li *ngIf=\"authService.loggedIn()\"  [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact: true}\"><a [routerLink]=\"['/myhuts']\">myhuts</a></li>\n\n                            <li role=\"separator\" class=\"divider\"></li>\n                            <!--<li class=\"dropdown-header\">Nav header</li>-->\n                                   <li *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact: true}\" ><a  (click)=\"logout()\" href=\"#\">logout</a></li>\n\n                      </ul>\n                    </li>\n                   </ul>\n                </ul>\n            </div>\n            <!--/.nav-collapse -->\n        </div>\n    </nav>\n<div id=\"sidebar\" *ngIf=\"authService.loggedIn()\" >\n    <div id=\"btn\" onclick=\"show(sidebar)\">\n        <span></span>\n        <span></span>\n        <span></span>\n    </div>\n<ul >         \n<li><a [routerLink]=\"['/']\">Home</a></li>\n<li *ngIf=\"authService.loggedIn()\"  [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact: true}\"><a [routerLink]=\"['/profile']\">profile</a></li>\n<li  *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact: true}\"><a  [routerLink]=\"['/addhuts']\">addhut</a></li>                \n<li *ngIf=\"authService.loggedIn()\"  [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact: true}\"><a [routerLink]=\"['/myhuts']\">myhuts</a></li>\n               \n</ul>\n</div>\n"
 
 /***/ }),
 
 /***/ 216:
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header\">Login</h2>\n<form (submit)=\"onLoginSubmit()\">\n \n\n    <div class=\"form-group\">\n    <label>username</label>\n    <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\">\n  </div>\n\n   <div class=\"form-group\">\n    <label>password</label>\n    <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\" required minlength=\"5\" maxlength=\"12\">\n  </div>\n  <input type=\"submit\" value=\"submit\" class=\"btn btn-primary\">\n</form>\n \n\n"
+module.exports = "\n<div class=\"container\" *ngIf=\"user\">\n\t<div class=\"row\">\n\t\t<div class=\"col-lg-3 col-sm-6\">\n\n            <div class=\"card hovercard\">\n                <div class=\"cardheader\">\n\n                </div>\n                <div class=\"avatar\">\n                    <img alt=\"\" src=\"http://lorempixel.com/100/100/people/9/\">\n                </div>\n                <div class=\"info\">\n                    <div class=\"title\">\n                        <a target=\"_blank\" href=\"http://scripteden.com/\">Script Eden</a>\n                    </div>\n                    <div class=\"desc\">{{user.name}}</div>\n                    <div class=\"desc\">{{user.username}}</div>\n                    <div class=\"desc\">{{user.email}}</div>\n                </div>\n                <div class=\"bottom\">\n                    <a class=\"btn btn-primary btn-twitter btn-sm\" href=\"https://twitter.com/webmaniac\">\n                        <i class=\"fa fa-twitter\"></i>\n                    </a>\n                    <a class=\"btn btn-danger btn-sm\" rel=\"publisher\"\n                       href=\"https://plus.google.com/+ahmshahnuralam\">\n                        <i class=\"fa fa-google-plus\"></i>\n                    </a>\n                    <a class=\"btn btn-primary btn-sm\" rel=\"publisher\"\n                       href=\"https://plus.google.com/shahnuralam\">\n                        <i class=\"fa fa-facebook\"></i>\n                    </a>\n                    <a class=\"btn btn-warning btn-sm\" rel=\"publisher\" href=\"https://plus.google.com/shahnuralam\">\n                        <i class=\"fa fa-behance\"></i>\n                    </a>\n                </div>\n            </div>\n\n        </div>\n\n\t</div>\n</div>"
 
 /***/ }),
 
 /***/ 217:
 /***/ (function(module, exports) {
 
+module.exports = "<h2 class=\"page-header\">Login</h2>\n<form (submit)=\"onLoginSubmit()\">\n \n\n    <div class=\"form-group\">\n    <label>username</label>\n    <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\">\n  </div>\n\n   <div class=\"form-group\">\n    <label>password</label>\n    <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\" required minlength=\"5\" maxlength=\"12\">\n  </div>\n  <input type=\"submit\" value=\"submit\" class=\"btn btn-primary\">\n</form>\n \n\n"
+
+/***/ }),
+
+/***/ 218:
+/***/ (function(module, exports) {
+
 module.exports = "<h2 class=\"page-header\">Register</h2>\n<form (submit)=\"onRegisterSubmit()\">\n  <div class=\"form-group\">\n    <label>Name</label>\n    <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\"/>\n  </div>\n\n    <div class=\"form-group\">\n    <label>username</label>\n    <input type=\"text\" [(ngModel)]=\"username\" name=\"username\" class=\"form-control\">\n  </div>\n\n    <div class=\"form-group\">\n    <label>email</label>\n    <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\">\n  </div>\n    <div class=\"form-group\">\n    <label>password</label>\n    <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\">\n  </div>\n  <input type=\"submit\" value=\"submit\" class=\"btn btn-primary\">\n</form>"
 
 /***/ }),
 
-/***/ 253:
+/***/ 254:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(109);
@@ -1605,5 +1608,5 @@ ValidateService = __decorate([
 
 /***/ })
 
-},[253]);
+},[254]);
 //# sourceMappingURL=main.bundle.js.map

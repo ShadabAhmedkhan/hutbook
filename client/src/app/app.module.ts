@@ -14,6 +14,7 @@ import { AuthGuard } from './guards/auth.guard';
 
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import { AgmCoreModule } from 'angular2-google-maps/core';
+import { AdsenseModule } from 'ng2-adsense';
 
 
 import { AppComponent } from './app.component';
@@ -68,6 +69,10 @@ FlashMessagesModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAOWMIcTqIC1hHbdjRpRi1Tr1un_BomQss',
       
+    }),
+         AdsenseModule.forRoot({
+        adClient: 'ca-pub-1895109071827119', //replace with your client from google adsense
+        adSlot:6278796456//replace with your slot from google adsense
     }),
     HttpModule,
   FormsModule,
