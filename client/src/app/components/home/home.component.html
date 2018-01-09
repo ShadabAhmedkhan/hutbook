@@ -1,5 +1,5 @@
 	<!--map-->
-<div align="center" class="container col-sm-12 map-style ">
+<div align="center" class="container col-sm-6 map-style ">
 		<sebm-google-map 
 [latitude]="lat" 
 [longitude]="lng"
@@ -35,7 +35,7 @@
   </sebm-google-map-marker>
 </sebm-google-map>
 	</div>
-  <div class="hutadds">
+  <!-- <div class="hutadds">
 <ng2-adsense
   [adClient]="ca-pub-1895109071827119"
   [adSlot]="6278796456"
@@ -44,12 +44,28 @@
   [height]="108">
 </ng2-adsense>
 
-  </div>
-  
-	<div class="container home-panel">
+  </div> -->
+  <div class="container ">
+  <div class="row">
+      <div class="col-md-4 cont" *ngFor="let Huts of Huts; let i=index" >
+
+    
+    <img class="card-img-top" src="http://placehold.it/300x200/000000/&text=Header" alt="Card image cap">
+   
+      <h5 class="card-title">name:{{Huts.name}}</h5>
+      <h5 class="card-title">name:{{Huts.location}}</h5>
+      <h5 class="card-title">name:{{Huts.rent}}</h5>
+      
+      <a  class="btn btn-primary" (click)="hutdetail(Huts, i)">Go somewhere</a>
+
+
+</div>
+</div>
+</div>
+	<!-- <div class="container ">
       <div class="row">
         
-        <div class="col-xs-3" *ngFor="let Huts of Huts; let i=index">
+        <div class="col-ms-6" >
 			<div class="project project-default">
 				<div class="shape">
 					<div class="shape-text">
@@ -74,4 +90,4 @@
        
 		</div>
       </div>
-</div>
+</div> -->

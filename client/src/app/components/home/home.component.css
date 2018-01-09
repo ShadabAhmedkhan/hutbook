@@ -78,9 +78,12 @@
 }
 .map-style{
 
-    margin-left: 93px;
+    /* margin-left: 93px; */
 
 
+}
+.cont{
+	padding-top: 20px;
 }
 .hutadds{
 	height: 500px;

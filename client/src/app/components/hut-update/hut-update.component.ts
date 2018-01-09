@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HutService } from './../../service/hut.service';
 import {ActivatedRoute, Router, Params} from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {Location} from '@angular/common';
 @Component({
   selector: 'app-hut-update',
   templateUrl: './hut-update.component.html',
@@ -14,10 +16,29 @@ export class HutUpdateComponent implements OnInit {
         maxPersonAllowed: number;
         rent:number;
         description: String;
+        updateForm: FormGroup;
   constructor( private hutService:HutService,
-  private route: ActivatedRoute
+  private route: ActivatedRoute,
+  private _formBuilder: FormBuilder,
+  private _location: Location,
+  
   ) {
-
+    this.route.queryParams.subscribe((params: any) =>{
+      // console.log('query params',params);
+      this.hut = params;
+      console.log(  'update',  this.hut.id)
+      // this.route.queryParams.subscribe((params: any)=>{
+      //   this.id = params['id']
+      // })
+      this.updateForm= this._formBuilder.group({ 
+    
+        name:[params['name'],Validators.required],
+        rooms:[params['rooms'],Validators.required],
+        maxPersonAllowed:[params['maxPersonAllowed'],Validators.required],
+        rent:[params['rent'],Validators.required],
+        description:[params['description'],Validators.required],
+      })
+})
  this.route.queryParams.subscribe((params: any) =>{
       // console.log('query params',params);
       this.hut = params;
@@ -29,21 +50,22 @@ export class HutUpdateComponent implements OnInit {
 
 
 updhut(){
-   const uphut={
+  //  const uphut={
     
-         name : this.name,
+  //        name : this.name,
         
-          rooms:this.rooms,
-          maxPersonAllowed:this.maxPersonAllowed,
+  //         rooms:this.rooms,
+  //         maxPersonAllowed:this.maxPersonAllowed,
       
-         rent:this.rent,
-         description: this.description 
+  //        rent:this.rent,
+  //        description: this.description 
 
-  }
+  // }
     //  console.log('form',uphut,this.hut.id);
-    this.hutService.updateHut(uphut,this.hut.id).subscribe(data =>{
+    this.hutService.updateHut(this.updateForm.value,this.hut.id).subscribe(data =>{
       // console.log(data);
     })
+    this._location.back();
 }
 
   ngOnInit() {
